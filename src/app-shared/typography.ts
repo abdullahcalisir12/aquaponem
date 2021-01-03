@@ -1,57 +1,60 @@
 import { css } from 'lit-element';
 
 export const textStyles = css`
-  h1, :host(.text-x4l) * {
-    font-weight: 600;
-    font-size: 3.5rem;
-    line-height: 1;
+  h1 {
+    font-weight: var(--fw-s);
+    font-size: var(--spc-12);
   }
 
-  h2, :host(.text-x3l) * {
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 1;
+  h2 {
+    font-weight: var(--fw-s);
+    font-size: var(--spc-10);
   }
 
-  h3, :host(.text-x2l) * {
-    font-weight: 600;
-    font-size: 2.5rem;
-    line-height: 1;
+  h3 {
+    font-weight: var(--fw-s);
+    font-size: var(--spc-10);
   }
 
-  h4, :host(.text-xl) * {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 1;
+  h4 {
+    font-weight: var(--fw-s);
+    font-size: var(--spc-7);
   }
 
-  h5, :host(.text-lg) * {
-    font-weight: 500;
-    font-size: 1.75rem;
-    line-height: 1;
+  h5 {
+    font-weight: var(--fw-m);
+    font-size: var(--spc-6);
   }
 
   h6, p, :host(.text-md) * {
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1;
+    font-weight: var(--fw-r);
+    font-size: var(--spc-5);
   }
 
-  .text-sm, :host(.text-sm) * {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1;
+  :host(.text-sm) * {
+    font-weight: var(--fw-r);
+    font-size: var(--spc-4);
   }
 
-  .text-xs, :host(.text-xs) * {
-    font-weight: 400;
-    font-size: 0.875rem;
-    line-height: 1;
+  :host(.text-xs) * {
+    font-weight: var(--fw-r);
+    font-size: var(--spc-3);
   }
+`;
 
-  .text-xxs, :host(.text-xxs) * {
-    font-weight: 400;
-    font-size: .75rem;
-    line-height: 1;
+export const fontFamily = css`
+  :host {
+    --f-family: 'Poppins';
+  }
+`;
+
+export const fontWeight = css`
+  :host {
+    --fw-t: 200; /* thin */
+    --fw-l: 300; /* light */
+    --fw-r: 400; /* regular */
+    --fw-m: 500; /* medium */
+    --fw-s: 600; /* semibold */
+    --fw-b: 700; /* bold */
   }
 `;
