@@ -9,7 +9,7 @@ export class Button extends LitElement {
 
   @property() variant: string = 'primary';
   @property() size: string = 'base';
-  @property() round: string = 'base';
+  @property() round: string = 'md';
   @property() label: string = 'button';
 
   static get styles() {
@@ -22,8 +22,8 @@ export class Button extends LitElement {
     return html`
       <button
         aria-label=${this.label}
-        class="${classMap({ [`btn-s-${this.size}`]: true, [`btn-r-${this.round}`]: true })}"
-        style="--color: var(--c-${this.variant});"
+        class="${classMap({ [`btn-s-${this.size}`]: true })}"
+        style="--color: var(--c-${this.variant}); --btn-br: var(--br-${this.round})"
       >
         <slot></slot>
       </button>

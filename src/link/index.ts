@@ -10,7 +10,7 @@ export class Link extends LitElement {
   @property() href: string = '#';
   @property() variant: string = 'primary';
   @property() size: string = 'base';
-  @property() round: string = 'base';
+  @property() round: string = 'md';
   @property() label: string = 'anchor';
 
   static get styles() {
@@ -23,9 +23,9 @@ export class Link extends LitElement {
     return html`
       <a
         aria-label=${this.label}
-        class="${classMap({ [`btn-s-${this.size}`]: true, [`btn-r-${this.round}`]: true })}"
+        class="${classMap({ [`btn-s-${this.size}`]: true })}"
         href="${this.href}"
-        style="--color: var(--c-${this.variant});">
+        style="--color: var(--c-${this.variant}); --btn-br: var(--br-${this.round})">
         <slot></slot>
       </a>
     `;
