@@ -1,5 +1,4 @@
 import { customElement, LitElement, html, css, property } from 'lit-element';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
 
 import { textStyles } from '@shared';
 import { prefix } from '@constants';
@@ -36,8 +35,11 @@ export class Text extends LitElement {
 
   render() {
     const tag = Object.keys(allowedTags).includes(this.tag) ? this.tag : 'p';
-    const template = `<${tag} style="--color: var(--c-${this.variant})"><slot></slot></${tag}>`;
+    const element = document.createElement(tag);
+    const slot = document.createElement('slot');
+    element.appendChild(slot);
+    element.style.cssText = `--color: var(--c-${this.variant})`;
 
-    return html`${ unsafeHTML(template) }`;
+    return html`${ element }`;
   }
 }
