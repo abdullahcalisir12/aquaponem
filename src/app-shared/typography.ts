@@ -4,38 +4,37 @@ export const textStyles = css`
   h1, :host(.text-x4l) * {
     font-weight: 600;
     font-size: 3.5rem;
-    line-height: 4rem;
+    line-height: 1;
   }
 
   h2, :host(.text-x3l) * {
     font-weight: 600;
     font-size: 3rem;
-    line-height: 3.5rem;
+    line-height: 1;
   }
 
   h3, :host(.text-x2l) * {
     font-weight: 600;
     font-size: 2.5rem;
-    line-height: 3rem;
+    line-height: 1;
   }
 
   h4, :host(.text-xl) * {
     font-weight: 600;
     font-size: 2rem;
-    line-height: 2.25rem;
+    line-height: 1;
   }
 
   h5, :host(.text-lg) * {
     font-weight: 500;
     font-size: 1.75rem;
-    line-height: 1.75rem;
-    letter-spacing: -0.5px;
+    line-height: 1;
   }
 
   p, :host(.text-md) * {
     font-weight: 400;
     font-size: 1.5rem;
-    line-height: 1.25rem;
+    line-height: 1;
   }
 
   .text-sm, :host(.text-sm) * {

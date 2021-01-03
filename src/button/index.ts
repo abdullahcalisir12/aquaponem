@@ -1,5 +1,4 @@
 import { LitElement, html, customElement, property } from 'lit-element';
-import { ifDefined } from 'lit-html/directives/if-defined';
 import { classMap } from 'lit-html/directives/class-map';
 
 import { buttonStyles } from '@shared';
@@ -22,7 +21,7 @@ export class Button extends LitElement {
   render() {
     return html`
       <button
-        aria-label=${ifDefined(this.label)}
+        aria-label=${this.label}
         class="${classMap({ [`btn-s-${this.size}`]: true, [`btn-r-${this.round}`]: true })}"
         style="--color: var(--c-${this.variant});"
       >

@@ -9,16 +9,15 @@ export const buttonStyles = css`
     all: unset;
     text-align: center;
     cursor: pointer;
-    box-sizing: content-box;
+    box-sizing: border-box;
     background-color: var(--color);
     border: 3px solid var(--color);
     color: var(--c-on-btn);
     font-weight: bold;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .125rem 1rem;
+    padding: .625rem 1.25rem;
+    height: 100%;
+    width: 100%;
   }
 
   button:hover, a:hover {
