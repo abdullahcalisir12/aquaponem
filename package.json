@@ -21,5 +21,27 @@
     "prettier": "^2.0.5",
     "snowpack": "^2.18.4",
     "typescript": "^4.0.0"
-  }
+  },
+  "name": "aquaponem-wc",
+  "description": "Aquaponem Design System Web Components",
+  "version": "0.0.1",
+  "main": "build/dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahcalisir12/aquaponem.git"
+  },
+  "keywords": [
+    "Design",
+    "System",
+    "Lit-Element",
+    "Lit-Html",
+    "Web",
+    "Components"
+  ],
+  "author": "Abdullah Calisir <abdullahcalisir12@gmail.com> (https://github.com/abdullahcalisir12)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdullahcalisir12/aquaponem/issues"
+  },
+  "homepage": "https://github.com/abdullahcalisir12/aquaponem#readme"
 }
