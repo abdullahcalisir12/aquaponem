@@ -1,7 +1,8 @@
-import { prefix } from '../constant';
 import { customElement, LitElement, html, css, property } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
-import { textStyles } from '@app/theme/typography';
+
+import { textStyles } from '@shared';
+import { prefix } from '@constants';
 
 type allowedTags = {
   h1: undefined,

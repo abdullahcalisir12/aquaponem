@@ -1,14 +1,12 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import { prefix } from '@app/constant';
-import { themeColors, colors } from '@app/theme/colors';
-
+import { themeColors } from '@shared';
+import { prefix } from '@constants';
 @customElement(`${prefix}-theme`)
 export class Theme extends LitElement {
 
   static get styles() {
     return [
       themeColors,
-      colors,
       css`
         :host {
           display: block;

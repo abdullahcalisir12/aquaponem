@@ -1,9 +1,9 @@
 import { LitElement, html, customElement, property } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map';
 import { ifDefined } from 'lit-html/directives/if-defined';
+import { classMap } from 'lit-html/directives/class-map';
 
-import { buttonStyles } from '@app/theme/button';
-import { prefix } from '@app/constant';
+import { buttonStyles } from '@shared';
+import { prefix } from '@constants';
 
 @customElement(`${prefix}-btn`)
 export class Button extends LitElement {
