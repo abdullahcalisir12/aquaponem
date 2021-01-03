@@ -22,9 +22,7 @@ export class Theme extends LitElement {
 
   render() {
     return html`
-    <div>
       <slot></slot>
-    </div>
     `;
   }
 }
