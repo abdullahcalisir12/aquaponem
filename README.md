@@ -14,7 +14,7 @@ Aquaponem is a web components library using lit-element to create a shared desig
 4. [Usage](#usage)
 5. [Built With](#built-with)
 6. [Authors](#authors)
-7. [License](#licence)
+7. [License](#license)
 
 ## Getting Started
 
