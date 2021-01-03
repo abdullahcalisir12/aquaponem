@@ -9,7 +9,7 @@ export class Card extends LitElement {
       css`
         :host {
           display: block;
-          border-radius: 10px;
+          border-radius: var(--br-base);
         }
 
         .card {
