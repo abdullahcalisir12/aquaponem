@@ -1,5 +1,4 @@
 import { customElement, LitElement, html, css, property } from 'lit-element';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 import { textStyles } from '@shared';
 import { prefix } from '@constants';
