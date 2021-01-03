@@ -23,7 +23,7 @@ export class Button extends LitElement {
     return html`
       <button
         aria-label=${ifDefined(this.label)}
-        class="${classMap({ [`btn-s-${this.size}`]: true, [`btn-r-${this.round}`]: true })}"  
+        class="${classMap({ [`btn-s-${this.size}`]: true, [`btn-r-${this.round}`]: true })}"
         style="--color: var(--c-${this.variant});"
       >
         <slot></slot>
