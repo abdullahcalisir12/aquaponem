@@ -41,6 +41,7 @@ Note: if you use script tag, please skip initialization and go to Usage section
 or
 
 ```
+<script src='https://unpkg.com/aquaponem@latest/build/dist/app/index.js'></script>
 <script src='https://unpkg.com/aquaponem@latest/build/dist/theme/index.js'></script>
 <script src='https://unpkg.com/aquaponem@latest/build/dist/button/index.js'></script>
 ```
@@ -56,15 +57,17 @@ import 'aquaponem';
 ### Single component initialization
 
 ```
-import { Theme, Button } from 'aquaponem';
+import { App, Theme, Button } from 'aquaponem';
 ```
 
 ## Usage
 
 ```
-<aq-theme dark>
-  <aq-btn variant="primary">Button<aq-btn>
-<aq-theme>
+<aq-app>
+   <aq-theme dark>
+      <aq-btn variant="primary">Button<aq-btn>
+   <aq-theme>
+<aq-app>
 ```
 
 ## Built With
