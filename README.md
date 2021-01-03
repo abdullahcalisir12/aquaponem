@@ -31,6 +31,7 @@ npm i aquaponem
 ### Using Aquaponem via cdn
 
 Put this into your html
+
 Note: if you use script tag, please skip initialization and go to Usage section
 
 ```
@@ -68,7 +69,7 @@ import { Theme, Button } from 'aquaponem';
 
 ## Authors
 
-- **Abdullah Calisir** - FrontEnd Engineer - [github](https://github.com/abdullahcalisir12)
+- **Abdullah Calisir** - Front End Engineer - [github](https://github.com/abdullahcalisir12) - [linkedin](https://www.linkedin.com/in/abdullahcalisir12/)
 
 ## License
 
