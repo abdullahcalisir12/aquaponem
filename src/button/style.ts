@@ -7,23 +7,25 @@ export const buttonStyles = css`
 
   button, a {
     all: unset;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
     cursor: pointer;
+    text-align: center;
     box-sizing: border-box;
-    background-color: var(--color);
-    border: var(--bw-3) solid var(--color);
-    border-radius: var(--btn-br);
+    text-transform: uppercase;
+
     color: var(--c-on-btn);
     font-weight: var(--fw-b);
-    text-transform: uppercase;
+    border-radius: var(--btn-br);
+    background-color: var(--color);
     padding: var(--spc-3) var(--spc-4);
-    height: 100%;
-    width: 100%;
+    border: var(--bw-3) solid var(--color);
   }
 
   button:hover, a:hover {
-    background-color: transparent;
     color: var(--color);
+    background-color: transparent;
   }
 
   button.btn-s-sm, a.btn-s-sm {
@@ -48,23 +50,23 @@ export const buttonStyles = css`
   }
 
   :host([outlined]) button, :host([outlined]) a {
-    background-color: transparent;
     color: var(--color);
+    background-color: transparent;
   }
 
   :host([outlined]) button:hover, :host([outlined]) a:hover {
-    background-color: var(--color);
     color: var(--c-on-btn);
+    background-color: var(--color);
   }
 
   :host([flat]) button, :host([flat]) a {
-    background-color: transparent;
     color: var(--color);
     border-color: transparent;
+    background-color: transparent;
   }
 
   :host([flat]) button:hover, :host([flat]) a:hover {
-    background-color: var(--color);
     color: var(--c-on-btn);
+    background-color: var(--color);
   }
 `

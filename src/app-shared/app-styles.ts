@@ -4,8 +4,8 @@ export const appStyles = css`
   :host {
     display: block;
     min-height: 100vh;
-    background-color: var(--c-bg);
     color: var(--c-on-bg);
+    background-color: var(--c-bg);
     font-family: var(--f-family, sans-serif);
   }
 `;
