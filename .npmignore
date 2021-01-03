@@ -10,4 +10,5 @@ ts.config.js
 yarn.lock
 public
 build/index.html
+build/favicon.ico
 build/__snowpack__
