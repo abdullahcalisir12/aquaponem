@@ -6,19 +6,15 @@
     <meta name="description" content="Web site created using create-snowpack-app" />
     <title>Snowpack App</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
       body {
-        all: inherit;
+        margin: 0;
+        padding: 0;
       }
     </style>
     <script type="module" src="/dist/index.js"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
-      html {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-      }
-    </style>
   </head>
   <body>
     <aq-app>
@@ -150,7 +146,7 @@
         <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary" round="sm">
           sm
         </aq-btn>
-        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" round="base">
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" round="md">
           base
         </aq-btn>
         <aq-btn class="mt-4 mx-4 flex-1" variant="warning" round="lg">
@@ -176,7 +172,6 @@
             <aq-text class="text-md">Hello World</aq-text>
             <aq-text class="text-sm">Hello World</aq-text>
             <aq-text class="text-xs">Hello World</aq-text>
-            <aq-text class="text-xxs">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -188,7 +183,6 @@
             <aq-text class="text-md" variant="primary">Hello World</aq-text>
             <aq-text class="text-sm" variant="primary">Hello World</aq-text>
             <aq-text class="text-xs" variant="primary">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="primary">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -200,7 +194,6 @@
             <aq-text class="text-md" variant="secondary">Hello World</aq-text>
             <aq-text class="text-sm" variant="secondary">Hello World</aq-text>
             <aq-text class="text-xs" variant="secondary">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="secondary">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -212,7 +205,6 @@
             <aq-text class="text-md" variant="tertiary">Hello World</aq-text>
             <aq-text class="text-sm" variant="tertiary">Hello World</aq-text>
             <aq-text class="text-xs" variant="tertiary">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="tertiary">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -224,7 +216,6 @@
             <aq-text class="text-md" variant="neutral">Hello World</aq-text>
             <aq-text class="text-sm" variant="neutral">Hello World</aq-text>
             <aq-text class="text-xs" variant="neutral">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="neutral">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -236,7 +227,6 @@
             <aq-text class="text-md" variant="warning">Hello World</aq-text>
             <aq-text class="text-sm" variant="warning">Hello World</aq-text>
             <aq-text class="text-xs" variant="warning">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="warning">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -248,7 +238,6 @@
             <aq-text class="text-md" variant="danger">Hello World</aq-text>
             <aq-text class="text-sm" variant="danger">Hello World</aq-text>
             <aq-text class="text-xs" variant="danger">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="danger">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -260,7 +249,6 @@
             <aq-text class="text-md" variant="success">Hello World</aq-text>
             <aq-text class="text-sm" variant="success">Hello World</aq-text>
             <aq-text class="text-xs" variant="success">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="success">Hello World</aq-text>
           </div>
 
           <div class="m-4">
@@ -272,7 +260,6 @@
             <aq-text class="text-md" variant="info">Hello World</aq-text>
             <aq-text class="text-sm" variant="info">Hello World</aq-text>
             <aq-text class="text-xs" variant="info">Hello World</aq-text>
-            <aq-text class="text-xxs" variant="info">Hello World</aq-text>
           </div>
         </div>
       </aq-card>
