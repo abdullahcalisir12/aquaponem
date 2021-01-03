@@ -1,4 +1,4 @@
-# Aquaponem
+# Aquaponem [![CodeFactor](https://www.codefactor.io/repository/github/abdullahcalisir12/aquaponem/badge?s=42676a78b4b0376a53e5dcf314224ccf94cc4b2a)](https://www.codefactor.io/repository/github/abdullahcalisir12/aquaponem)
 
 Aquaponem is a web components library using lit-element to create a shared design system for my personal projects.
 
