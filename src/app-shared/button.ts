@@ -11,11 +11,12 @@ export const buttonStyles = css`
     cursor: pointer;
     box-sizing: border-box;
     background-color: var(--color);
-    border: 3px solid var(--color);
+    border: var(--bw-3) solid var(--color);
+    border-radius: var(--btn-br);
     color: var(--c-on-btn);
-    font-weight: bold;
+    font-weight: var(--fw-b);
     text-transform: uppercase;
-    padding: .625rem 1.25rem;
+    padding: var(--spc-3) var(--spc-4);
     height: 100%;
     width: 100%;
   }
@@ -26,48 +27,24 @@ export const buttonStyles = css`
   }
 
   button.btn-s-sm, a.btn-s-sm {
-    min-height: 24px;
-    font-size: .625rem;
+    padding: .375rem .75rem;
+    font-size: var(--spc-3);
   }
 
   button.btn-s-md, a.btn-s-md {
-    min-height: 28px;
-    font-size: .75rem;
+    font-size: var(--spc-3);
   }
 
   button.btn-s-base, a.btn-s-base {
-    min-height: 32px;
-    font-size: .875rem;
+    font-size: var(--spc-4);
   }
 
   button.btn-s-lg, a.btn-s-lg {
-    min-height: 36px;
-    font-size: 1rem;
+    font-size: var(--spc-5);
   }
 
   button.btn-s-xl, a.btn-s-xl {
-    min-height: 40px;
-    font-size: 1.25rem;
-  }
-
-  button.btn-r-none, a.btn-r-none {
-    border-radius: 0px;
-  }
-
-  button.btn-r-sm, a.btn-r-sm {
-    border-radius: 4px;
-  }
-
-  button.btn-r-base, a.btn-r-base {
-    border-radius: 8px;
-  }
-
-  button.btn-r-lg, a.btn-r-lg {
-    border-radius: 12px;
-  }
-
-  button.btn-r-full, a.btn-r-full {
-    border-radius: 9999px;
+    font-size: var(--spc-6);
   }
 
   :host([outlined]) button, :host([outlined]) a {
