@@ -1,5 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import { prefix } from '../constant';
+import { prefix } from '@app/constant';
 
 @customElement(`${prefix}-card`)
 export class Card extends LitElement {

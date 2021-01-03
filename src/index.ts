@@ -1,5 +1,5 @@
-export { Theme } from './theme';
-export { Card } from './card';
-export { Text } from './text';
-export { Button } from './button';
-export { Link } from './link';
+export { Theme } from '@app/theme';
+export { Card } from '@app/card';
+export { Text } from '@app/text';
+export { Button } from '@app/button';
+export { Link } from '@app/link';

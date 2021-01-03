@@ -3,6 +3,10 @@
   "description": "Aquaponem Design System Web Components",
   "version": "0.0.1",
   "main": "build/dist/index.js",
+  "files": [
+    "build/dist",
+    "build/web_modules"
+  ],
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",

@@ -3,4 +3,11 @@ node_modules
 types
 .github
 .gitignore
+.prettierrc
+babel.config.json
+snowpack.config.js
+ts.config.js
+yarn.lock
 public
+build/index.html
+build/__snowpack__

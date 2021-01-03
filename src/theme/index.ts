@@ -1,6 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import { prefix } from '../constant';
-import { themeColors, colors } from './colors';
+import { prefix } from '@app/constant';
+import { themeColors, colors } from '@app/theme/colors';
 
 @customElement(`${prefix}-theme`)
 export class Theme extends LitElement {
