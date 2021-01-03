@@ -28,14 +28,21 @@ These instructions will get you a copy of the project up and running on your loc
 npm i aquaponem
 ```
 
-### Using Aquaponem via cdn
+### Install Aquaponem via cdn
 
-Put this into your html
+Put this into your html and replace @latest with any version you want to use, ex. @0.0.1
 
 Note: if you use script tag, please skip initialization and go to Usage section
 
 ```
+<script src='https://unpkg.com/aquaponem@latest/build/dist/index.js'></script>
+```
 
+or
+
+```
+<script src='https://unpkg.com/aquaponem@latest/build/dist/theme/index.js'></script>
+<script src='https://unpkg.com/aquaponem@latest/build/dist/button/index.js'></script>
 ```
 
 ## Initialization
