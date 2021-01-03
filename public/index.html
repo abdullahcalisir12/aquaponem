@@ -11,10 +11,272 @@
         all: inherit;
       }
     </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+      html {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+      }
+    </style>
+    <script type="module" src="/dist/index.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    Hello World
+    <aq-theme class="p-6" dark>
+      <aq-text tag="h3">Color Palette</aq-text>
+      <aq-card class="flex flex-wrap">
+        <aq-text class="mx-4 mt-4" tag="h5">Buttons</aq-text>
+        <aq-link class="mt-4 mx-4" href="#" variant="primary">
+          primary
+        </aq-link>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="secondary">
+          secondary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary">
+          tertiary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral">
+          neutral
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="warning">
+          warning
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger">
+          danger
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="success">
+          success
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="info">
+          info
+        </aq-btn>
+      </aq-card>
+
+      <aq-card class="flex flex-wrap">
+        <aq-text class="mx-4 mt-4" tag="h5">Buttons / Outlined</aq-text>
+        <aq-link class="mt-4 mx-4 flex-1" href="#" variant="primary" outlined>
+          primary
+        </aq-link>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="secondary" outlined>
+          secondary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary" outlined>
+          tertiary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" outlined>
+          neutral
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="warning" outlined>
+          warning
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger" outlined>
+          danger
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="success" outlined>
+          success
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="info" outlined>
+          info
+        </aq-btn>
+      </aq-card>
+
+      <aq-card class="flex flex-wrap">
+        <aq-text class="mx-4 mt-4" tag="h5">Buttons / Flat</aq-text>
+        <aq-link class="mt-4 mx-4 flex-1" href="#" variant="primary" flat>
+          primary
+        </aq-link>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="secondary" flat>
+          secondary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary" flat>
+          tertiary
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" flat>
+          neutral
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="warning" flat>
+          warning
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger" flat>
+          danger
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="success" flat>
+          success
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="info" flat>
+          info
+        </aq-btn>
+      </aq-card>
+
+      <aq-card class="flex flex-wrap">
+        <aq-text class="mx-4 mt-4" tag="h5">Buttons / Size</aq-text>
+        <aq-link class="mt-4 mx-4 flex-1" href="#" variant="primary" size="sm">
+          primary / sm
+        </aq-link>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="secondary" size="sm">
+          secondary / sm
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary" size="md">
+          tertiary / md
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" size="md">
+          neutral / md
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="primary" size="base">
+          base
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="warning" size="lg">
+          warning / lg
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger" size="lg">
+          danger / lg
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="success" size="xl">
+          success / xl
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="info" size="xl">
+          info / xl
+        </aq-btn>
+      </aq-card>
+
+      <aq-card class="flex flex-wrap">
+        <aq-text class="mx-4 mt-4" tag="h5">Buttons / Round</aq-text>
+        <aq-link class="mt-4 mx-4 flex-1" href="#" variant="primary" round="none">
+          none
+        </aq-link>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="secondary" round="sm">
+          sm
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="tertiary" round="sm">
+          sm
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="neutral" round="base">
+          base
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="warning" round="lg">
+          lg
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger" round="lg">
+          lg
+        </aq-btn>
+        <aq-btn class="mt-4 mx-4 flex-1" variant="danger" round="full">
+          full
+        </aq-btn>
+      </aq-card>
+
+      <aq-text class="my-4" tag="h3">Typography</aq-text>
+      <aq-card class="my-6" primary>
+        <div class="flex flex-wrap">
+          <div class="m-4">
+            <aq-text tag="h1">Hello World</aq-text>
+            <aq-text tag="h2">Hello World</aq-text>
+            <aq-text tag="h3">Hello World</aq-text>
+            <aq-text tag="h4">Hello World</aq-text>
+            <aq-text tag="h5">Hello World</aq-text>
+            <aq-text class="text-md">Hello World</aq-text>
+            <aq-text class="text-sm">Hello World</aq-text>
+            <aq-text class="text-xs">Hello World</aq-text>
+            <aq-text class="text-xxs">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="primary">Hello World</aq-text>
+            <aq-text tag="h2" variant="primary">Hello World</aq-text>
+            <aq-text tag="h3" variant="primary">Hello World</aq-text>
+            <aq-text tag="h4" variant="primary">Hello World</aq-text>
+            <aq-text tag="h5" variant="primary">Hello World</aq-text>
+            <aq-text class="text-md" variant="primary">Hello World</aq-text>
+            <aq-text class="text-sm" variant="primary">Hello World</aq-text>
+            <aq-text class="text-xs" variant="primary">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="primary">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="secondary">Hello World</aq-text>
+            <aq-text tag="h2" variant="secondary">Hello World</aq-text>
+            <aq-text tag="h3" variant="secondary">Hello World</aq-text>
+            <aq-text tag="h4" variant="secondary">Hello World</aq-text>
+            <aq-text tag="h5" variant="secondary">Hello World</aq-text>
+            <aq-text class="text-md" variant="secondary">Hello World</aq-text>
+            <aq-text class="text-sm" variant="secondary">Hello World</aq-text>
+            <aq-text class="text-xs" variant="secondary">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="secondary">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="tertiary">Hello World</aq-text>
+            <aq-text tag="h2" variant="tertiary">Hello World</aq-text>
+            <aq-text tag="h3" variant="tertiary">Hello World</aq-text>
+            <aq-text tag="h4" variant="tertiary">Hello World</aq-text>
+            <aq-text tag="h5" variant="tertiary">Hello World</aq-text>
+            <aq-text class="text-md" variant="tertiary">Hello World</aq-text>
+            <aq-text class="text-sm" variant="tertiary">Hello World</aq-text>
+            <aq-text class="text-xs" variant="tertiary">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="tertiary">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="neutral">Hello World</aq-text>
+            <aq-text tag="h2" variant="neutral">Hello World</aq-text>
+            <aq-text tag="h3" variant="neutral">Hello World</aq-text>
+            <aq-text tag="h4" variant="neutral">Hello World</aq-text>
+            <aq-text tag="h5" variant="neutral">Hello World</aq-text>
+            <aq-text class="text-md" variant="neutral">Hello World</aq-text>
+            <aq-text class="text-sm" variant="neutral">Hello World</aq-text>
+            <aq-text class="text-xs" variant="neutral">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="neutral">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="warning">Hello World</aq-text>
+            <aq-text tag="h2" variant="warning">Hello World</aq-text>
+            <aq-text tag="h3" variant="warning">Hello World</aq-text>
+            <aq-text tag="h4" variant="warning">Hello World</aq-text>
+            <aq-text tag="h5" variant="warning">Hello World</aq-text>
+            <aq-text class="text-md" variant="warning">Hello World</aq-text>
+            <aq-text class="text-sm" variant="warning">Hello World</aq-text>
+            <aq-text class="text-xs" variant="warning">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="warning">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="danger">Hello World</aq-text>
+            <aq-text tag="h2" variant="danger">Hello World</aq-text>
+            <aq-text tag="h3" variant="danger">Hello World</aq-text>
+            <aq-text tag="h4" variant="danger">Hello World</aq-text>
+            <aq-text tag="h5" variant="danger">Hello World</aq-text>
+            <aq-text class="text-md" variant="danger">Hello World</aq-text>
+            <aq-text class="text-sm" variant="danger">Hello World</aq-text>
+            <aq-text class="text-xs" variant="danger">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="danger">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="success">Hello World</aq-text>
+            <aq-text tag="h2" variant="success">Hello World</aq-text>
+            <aq-text tag="h3" variant="success">Hello World</aq-text>
+            <aq-text tag="h4" variant="success">Hello World</aq-text>
+            <aq-text tag="h5" variant="success">Hello World</aq-text>
+            <aq-text class="text-md" variant="success">Hello World</aq-text>
+            <aq-text class="text-sm" variant="success">Hello World</aq-text>
+            <aq-text class="text-xs" variant="success">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="success">Hello World</aq-text>
+          </div>
+
+          <div class="m-4">
+            <aq-text tag="h1" variant="info">Hello World</aq-text>
+            <aq-text tag="h2" variant="info">Hello World</aq-text>
+            <aq-text tag="h3" variant="info">Hello World</aq-text>
+            <aq-text tag="h4" variant="info">Hello World</aq-text>
+            <aq-text tag="h5" variant="info">Hello World</aq-text>
+            <aq-text class="text-md" variant="info">Hello World</aq-text>
+            <aq-text class="text-sm" variant="info">Hello World</aq-text>
+            <aq-text class="text-xs" variant="info">Hello World</aq-text>
+            <aq-text class="text-xxs" variant="info">Hello World</aq-text>
+          </div>
+        </div>
+      </aq-card>
+    </aq-theme>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
   </body>
 </html>
