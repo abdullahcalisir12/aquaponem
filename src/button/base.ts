@@ -1,12 +1,12 @@
-import { LitElement, html, property } from 'lit-element';
+import { LitElement, property } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 
-import { buttonStyles } from '@shared';
+import { buttonStyles } from './style';
 
 export class Base extends LitElement {
-  @property() variant: string = 'primary';
-  @property() size: string = 'base';
   @property() round: string = 'md';
+  @property() size: string = 'base';
+  @property() variant: string = 'primary';
 
   static get styles() {
     return [

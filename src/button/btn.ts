@@ -1,7 +1,7 @@
 import { html, customElement, property } from 'lit-element';
 
-import { prefix } from '@constants';
 import { Base } from './base';
+import { prefix } from '@constants';
 
 @customElement(`${prefix}-btn`)
 export class Button extends Base {

@@ -16,8 +16,9 @@ enum allowedTags {
 
 @customElement(`${prefix}-text`)
 export class Text extends LitElement {
-  @property() tag: keyof typeof allowedTags = 'p';
+  
   @property() variant: string = '';
+  @property() tag: keyof typeof allowedTags = 'p';
 
   static get styles() {
     return [
