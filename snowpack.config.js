@@ -25,6 +25,8 @@ module.exports = {
     /* ... */
   },
   alias: {
-    '@app': './src',
+    '@': './src',
+    '@constants': './src/app-constants/index.ts',
+    '@shared': './src/app-shared/index.ts',
   },
 };
