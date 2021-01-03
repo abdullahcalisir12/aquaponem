@@ -2,20 +2,61 @@
 
 Aquaponem is a web components library using lit-element to create a shared design system for my personal projects.
 
+# Table of Contents
+
+1. [Getting Started](#getting-started)
+2. [Installing](#installing)
+   1. [Install via npm](#install-aquaponem-via-npm)
+   2. [Install via cdn](#install-aquaponem-via-cdn)
+3. [Initialization](#initialization)
+   1. [Initialize All Components](#all-component-initialization)
+   2. [Initialize Single Component](#single-component-initialization)
+4. [Usage](#usage)
+5. [Built With](#built-with)
+6. [Authors](#authors)
+7. [License](#licence)
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
 ### Installing
+
+### Install Aquaponem via npm
 
 ```
 npm i aquaponem
 ```
 
-or
+### Using Aquaponem via cdn
+
+Put this into your html
+Note: if you use script tag, please skip initialization and go to Usage section
 
 ```
-yarn add aquaponem
+
+```
+
+## Initialization
+
+### All component initialization
+
+```
+import 'aquaponem';
+```
+
+### Single component initialization
+
+```
+import { Theme, Button } from 'aquaponem';
+```
+
+## Usage
+
+```
+<aq-theme dark>
+  <aq-btn variant="primary">Button<aq-btn>
+<aq-theme>
 ```
 
 ## Built With
