@@ -31,7 +31,7 @@ export const textStyles = css`
     line-height: 1;
   }
 
-  p, :host(.text-md) * {
+  h6, p, :host(.text-md) * {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1;

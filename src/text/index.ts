@@ -4,18 +4,19 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 import { textStyles } from '@shared';
 import { prefix } from '@constants';
 
-type allowedTags = {
-  h1: undefined,
-  h2: undefined,
-  h3: undefined,
-  h4: undefined,
-  h5: undefined,
-  p: undefined
+enum allowedTags {
+  h1 = 'h1',
+  h2 = 'h2',
+  h3 = 'h3',
+  h4 = 'h4',
+  h5 = 'h5',
+  h6 = 'h6',
+  p = 'p'
 }
 
 @customElement(`${prefix}-text`)
 export class Text extends LitElement {
-  @property() tag: keyof allowedTags = 'p';
+  @property() tag: keyof typeof allowedTags = 'p';
   @property() variant: string = '';
 
   static get styles() {
@@ -34,11 +35,12 @@ export class Text extends LitElement {
   }
 
   render() {
-    const template = `<${this.tag}><slot></slot></${this.tag}>`
-    return html`
-      <div style="--color: var(--c-${this.variant})">
-        ${unsafeHTML(template)}
-      </div>
-    `;
+    const tag = Object.keys(allowedTags).includes(this.tag) ? this.tag : 'p';
+    const element = document.createElement(tag);
+    const slot = document.createElement('slot');
+    element.appendChild(slot);
+    element.style.cssText = `--color: var(--c-${this.variant})`;
+
+    return html`${ element }`;
   }
 }
