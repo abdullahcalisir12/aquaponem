@@ -1,9 +1,8 @@
-import { LitElement, html, customElement } from 'lit-element';
+import { LitElement, html, customElement, css } from 'lit-element';
 
 import {
   colors,
   spacing,
-  appStyles,
   fontFamily,
   fontWeight,
   borderWidth,
@@ -18,11 +17,16 @@ export class App extends LitElement {
     return [
       colors,
       spacing,
-      appStyles,
       fontFamily,
       fontWeight,
       borderWidth,
       borderRadius,
+      css`
+        :host {
+          display: block;
+          min-height: 100vh;
+        }
+      `
     ];
   }
 
