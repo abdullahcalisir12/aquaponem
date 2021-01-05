@@ -7,6 +7,7 @@ export class Base extends LitElement {
   @property() round: string = 'md';
   @property() size: string = 'base';
   @property() variant: string = 'primary';
+  @property() color: string|null = null;
 
   static get styles() {
     return [
@@ -19,6 +20,10 @@ export class Base extends LitElement {
   }
 
   public get styles() {
-    return `--color: var(--c-${this.variant}); --btn-br: var(--br-${this.round})`;
+    const color = this.color ? this.color : `var(--c-${this.variant})`;
+    return `
+      --color: ${color};
+      --btn-br: var(--br-${this.round})
+    `;
   }
 }
