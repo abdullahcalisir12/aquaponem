@@ -1,6 +1,5 @@
 import { LitElement, html, customElement, property, css } from 'lit-element';
 import { prefix } from '@constants';
-import { styleMap } from 'lit-html/directives/style-map';
 
 @customElement(`${prefix}-col`)
 export class Column extends LitElement {
