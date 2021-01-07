@@ -65,7 +65,7 @@ import { App, Theme, Button } from 'aquaponem';
 ```
 <aq-app>
    <aq-theme dark>
-      <aq-btn variant="primary">Button<aq-btn>
+      <aq-btn color="primary">Button<aq-btn>
    <aq-theme>
 <aq-app>
 ```
