@@ -9,21 +9,25 @@ export class Row extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
-      }
-
-      slot {
         display: flex;
         flex-wrap: wrap;
       }
     `;
   }
 
+  connectedCallback() {
+    super.connectedCallback();
+    let [v, h] = this.gutters.split(',');
+    h = h ? h : v;
+    this.style.setProperty('--total-col', `${this.column}`);
+    this.style.setProperty('--gutters-h', `${h}px`);
+    this.style.setProperty('--gutters-v', `${v}px`);
+    this.style.setProperty('margin', `0 ${Number(h) / -2}px`);
+  }
+
   render() {
     return html`
-      <div style="--total-col: ${this.column}; --gutters: ${this.gutters.split(',').map(g => `${g}px`).join(' ')}">
-        <slot></slot>
-      </div>
+      <slot></slot>
     `;
   }
 }
