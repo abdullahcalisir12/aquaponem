@@ -9,21 +9,19 @@ export class Column extends LitElement {
     return css`
       :host {
         display: block;
+        margin: calc(var(--gutters-v) / 2) calc(var(--gutters-h) / 2);
       }
     `;
   }
 
   connectedCallback() {
     super.connectedCallback();
-    this.style.setProperty('flex', `1 1 calc(${this.size} / var(--total-col) * 100%)`);
-    this.style.setProperty('margin', 'var(--gutters)');
+    this.style.setProperty('flex', `1 1 calc(${this.size} / var(--total-col) * 100% - var(--gutters-h))`);
   }
 
   render() {
     return html`
-      <div>
-        <slot></slot>
-      </div>
+      <slot></slot>
     `;
   }
 
