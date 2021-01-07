@@ -7,7 +7,7 @@
     <icon rel="icon" href="favicon.ico" />
     <title>Snowpack App</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+      /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
 
       body {
         margin: 0;
@@ -15,53 +15,52 @@
       }
     </style>
     <script type="module" src="/dist/index.js"></script>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
     <aq-app>
       <aq-theme dark>
         <aq-container size="lg">
           <aq-row column="16" gutters="16">
-            <aq-col class="bg-blue-100 text-black" size="4">1</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">2</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">3</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">4</aq-col>
+            <aq-col size="4">1</aq-col>
+            <aq-col size="4">2</aq-col>
+            <aq-col size="4">3</aq-col>
+            <aq-col size="4">4</aq-col>
           </aq-row>
           <aq-row column="16" gutters="8,16">
-            <aq-col class="bg-blue-100 text-black" size="4">1</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">2</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">3</aq-col>
-            <aq-col class="bg-blue-100 text-black" size="4">4</aq-col>
+            <aq-col size="4">1</aq-col>
+            <aq-col size="4">2</aq-col>
+            <aq-col size="4">3</aq-col>
+            <aq-col size="4">4</aq-col>
           </aq-row>
-          <aq-row column="16" gutter="12">
+          <aq-row column="16" gutters="12">
             <aq-col>
               <aq-text tag="h3">Color Palette</aq-text>
             </aq-col>
             <aq-col>
               <aq-card>
-                <aq-text class="mx-4 mt-4" tag="h5">Buttons</aq-text>
-                <aq-link class="mt-4 mx-4" href="#" variant="primary">
+                <aq-text tag="h5">Buttons</aq-text>
+                <aq-link href="#" color="primary">
                   primary
                 </aq-link>
-                <aq-btn class="mt-4 mx-4" variant="secondary">
+                <aq-btn color="secondary">
                   secondary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="tertiary">
+                <aq-btn color="tertiary">
                   tertiary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="neutral">
+                <aq-btn color="neutral">
                   neutral
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="warning">
+                <aq-btn color="warning">
                   warning
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger">
+                <aq-btn color="danger">
                   danger
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="success">
+                <aq-btn color="success">
                   success
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="info">
+                <aq-btn color="info">
                   info
                 </aq-btn>
               </aq-card>
@@ -69,29 +68,29 @@
 
             <aq-col>
               <aq-card>
-                <aq-text class="mx-4 mt-4" tag="h5">Buttons / Outlined</aq-text>
-                <aq-link class="mt-4 mx-4" href="#" variant="primary" outlined>
+                <aq-text tag="h5">Buttons / Outlined</aq-text>
+                <aq-link href="#" color="primary" outlined>
                   primary
                 </aq-link>
-                <aq-btn class="mt-4 mx-4" variant="secondary" outlined>
+                <aq-btn color="secondary" outlined>
                   secondary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="tertiary" outlined>
+                <aq-btn color="tertiary" outlined>
                   tertiary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="neutral" outlined>
+                <aq-btn color="neutral" outlined>
                   neutral
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="warning" outlined>
+                <aq-btn color="warning" outlined>
                   warning
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger" outlined>
+                <aq-btn color="danger" outlined>
                   danger
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="success" outlined>
+                <aq-btn color="success" outlined>
                   success
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="info" outlined>
+                <aq-btn color="info" outlined>
                   info
                 </aq-btn>
               </aq-card>
@@ -99,29 +98,29 @@
 
             <aq-col>
               <aq-card>
-                <aq-text class="mx-4 mt-4" tag="h5">Buttons / Flat</aq-text>
-                <aq-link class="mt-4 mx-4" href="#" variant="primary" flat>
+                <aq-text tag="h5">Buttons / Flat</aq-text>
+                <aq-link href="#" color="primary" flat>
                   primary
                 </aq-link>
-                <aq-btn class="mt-4 mx-4" variant="secondary" flat>
+                <aq-btn color="secondary" flat>
                   secondary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="tertiary" flat>
+                <aq-btn color="tertiary" flat>
                   tertiary
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="neutral" flat>
+                <aq-btn color="neutral" flat>
                   neutral
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="warning" flat>
+                <aq-btn color="warning" flat>
                   warning
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger" flat>
+                <aq-btn color="danger" flat>
                   danger
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="success" flat>
+                <aq-btn color="success" flat>
                   success
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="info" flat>
+                <aq-btn color="info" flat>
                   info
                 </aq-btn>
               </aq-card>
@@ -129,32 +128,32 @@
 
             <aq-col>
               <aq-card>
-                <aq-text class="mx-4 mt-4" tag="h5">Buttons / Size</aq-text>
-                <aq-link class="mt-4 mx-4" href="#" variant="primary" size="sm">
+                <aq-text tag="h5">Buttons / Size</aq-text>
+                <aq-link href="#" color="primary" size="sm">
                   primary / sm
                 </aq-link>
-                <aq-btn class="mt-4 mx-4" variant="secondary" size="sm">
+                <aq-btn color="secondary" size="sm">
                   secondary / sm
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="tertiary" size="md">
+                <aq-btn color="tertiary" size="md">
                   tertiary / md
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="neutral" size="md">
+                <aq-btn color="neutral" size="md">
                   neutral / md
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="primary" size="base">
+                <aq-btn color="primary" size="base">
                   base
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="warning" size="lg">
+                <aq-btn color="warning" size="lg">
                   warning / lg
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger" size="lg">
+                <aq-btn color="danger" size="lg">
                   danger / lg
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="success" size="xl">
+                <aq-btn color="success" size="xl">
                   success / xl
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="info" size="xl">
+                <aq-btn color="info" size="xl">
                   info / xl
                 </aq-btn>
               </aq-card>
@@ -162,36 +161,36 @@
 
             <aq-col>
               <aq-card>
-                <aq-text class="mx-4 mt-4" tag="h5">Buttons / Round</aq-text>
-                <aq-link class="mt-4 mx-4" href="#" variant="primary" round="none">
+                <aq-text tag="h5">Buttons / Round</aq-text>
+                <aq-link href="#" color="primary" round="none">
                   none
                 </aq-link>
-                <aq-btn class="mt-4 mx-4" variant="secondary" round="sm">
+                <aq-btn color="secondary" round="sm">
                   sm
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="tertiary" round="sm">
+                <aq-btn color="tertiary" round="sm">
                   sm
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="neutral" round="md">
+                <aq-btn color="neutral" round="md">
                   base
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="warning" round="lg">
+                <aq-btn color="warning" round="lg">
                   lg
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger" round="lg">
+                <aq-btn color="danger" round="lg">
                   lg
                 </aq-btn>
-                <aq-btn class="mt-4 mx-4" variant="danger" round="full">
+                <aq-btn color="danger" round="full">
                   full
                 </aq-btn>
               </aq-card>
             </aq-col>
           </aq-row>
 
-      <aq-text class="my-4" tag="h3">Typography</aq-text>
-      <aq-card class="my-6">
-        <div class="flex flex-wrap">
-          <div class="m-4">
+      <aq-text tag="h3">Typography</aq-text>
+      <aq-card>
+        <aq-row gutters="32,0">
+          <aq-col size="3">
             <aq-text tag="h1">Hello World</aq-text>
             <aq-text tag="h2">Hello World</aq-text>
             <aq-text tag="h3">Hello World</aq-text>
@@ -200,96 +199,96 @@
             <aq-text class="text-md">Hello World</aq-text>
             <aq-text class="text-sm">Hello World</aq-text>
             <aq-text class="text-xs">Hello World</aq-text>
-          </div>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="primary">Hello World</aq-text>
-            <aq-text tag="h2" variant="primary">Hello World</aq-text>
-            <aq-text tag="h3" variant="primary">Hello World</aq-text>
-            <aq-text tag="h4" variant="primary">Hello World</aq-text>
-            <aq-text tag="h5" variant="primary">Hello World</aq-text>
-            <aq-text class="text-md" variant="primary">Hello World</aq-text>
-            <aq-text class="text-sm" variant="primary">Hello World</aq-text>
-            <aq-text class="text-xs" variant="primary">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="primary">Hello World</aq-text>
+            <aq-text tag="h2" color="primary">Hello World</aq-text>
+            <aq-text tag="h3" color="primary">Hello World</aq-text>
+            <aq-text tag="h4" color="primary">Hello World</aq-text>
+            <aq-text tag="h5" color="primary">Hello World</aq-text>
+            <aq-text class="text-md" color="primary">Hello World</aq-text>
+            <aq-text class="text-sm" color="primary">Hello World</aq-text>
+            <aq-text class="text-xs" color="primary">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="secondary">Hello World</aq-text>
-            <aq-text tag="h2" variant="secondary">Hello World</aq-text>
-            <aq-text tag="h3" variant="secondary">Hello World</aq-text>
-            <aq-text tag="h4" variant="secondary">Hello World</aq-text>
-            <aq-text tag="h5" variant="secondary">Hello World</aq-text>
-            <aq-text class="text-md" variant="secondary">Hello World</aq-text>
-            <aq-text class="text-sm" variant="secondary">Hello World</aq-text>
-            <aq-text class="text-xs" variant="secondary">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="secondary">Hello World</aq-text>
+            <aq-text tag="h2" color="secondary">Hello World</aq-text>
+            <aq-text tag="h3" color="secondary">Hello World</aq-text>
+            <aq-text tag="h4" color="secondary">Hello World</aq-text>
+            <aq-text tag="h5" color="secondary">Hello World</aq-text>
+            <aq-text class="text-md" color="secondary">Hello World</aq-text>
+            <aq-text class="text-sm" color="secondary">Hello World</aq-text>
+            <aq-text class="text-xs" color="secondary">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="tertiary">Hello World</aq-text>
-            <aq-text tag="h2" variant="tertiary">Hello World</aq-text>
-            <aq-text tag="h3" variant="tertiary">Hello World</aq-text>
-            <aq-text tag="h4" variant="tertiary">Hello World</aq-text>
-            <aq-text tag="h5" variant="tertiary">Hello World</aq-text>
-            <aq-text class="text-md" variant="tertiary">Hello World</aq-text>
-            <aq-text class="text-sm" variant="tertiary">Hello World</aq-text>
-            <aq-text class="text-xs" variant="tertiary">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="tertiary">Hello World</aq-text>
+            <aq-text tag="h2" color="tertiary">Hello World</aq-text>
+            <aq-text tag="h3" color="tertiary">Hello World</aq-text>
+            <aq-text tag="h4" color="tertiary">Hello World</aq-text>
+            <aq-text tag="h5" color="tertiary">Hello World</aq-text>
+            <aq-text class="text-md" color="tertiary">Hello World</aq-text>
+            <aq-text class="text-sm" color="tertiary">Hello World</aq-text>
+            <aq-text class="text-xs" color="tertiary">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="neutral">Hello World</aq-text>
-            <aq-text tag="h2" variant="neutral">Hello World</aq-text>
-            <aq-text tag="h3" variant="neutral">Hello World</aq-text>
-            <aq-text tag="h4" variant="neutral">Hello World</aq-text>
-            <aq-text tag="h5" variant="neutral">Hello World</aq-text>
-            <aq-text class="text-md" variant="neutral">Hello World</aq-text>
-            <aq-text class="text-sm" variant="neutral">Hello World</aq-text>
-            <aq-text class="text-xs" variant="neutral">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="neutral">Hello World</aq-text>
+            <aq-text tag="h2" color="neutral">Hello World</aq-text>
+            <aq-text tag="h3" color="neutral">Hello World</aq-text>
+            <aq-text tag="h4" color="neutral">Hello World</aq-text>
+            <aq-text tag="h5" color="neutral">Hello World</aq-text>
+            <aq-text class="text-md" color="neutral">Hello World</aq-text>
+            <aq-text class="text-sm" color="neutral">Hello World</aq-text>
+            <aq-text class="text-xs" color="neutral">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="warning">Hello World</aq-text>
-            <aq-text tag="h2" variant="warning">Hello World</aq-text>
-            <aq-text tag="h3" variant="warning">Hello World</aq-text>
-            <aq-text tag="h4" variant="warning">Hello World</aq-text>
-            <aq-text tag="h5" variant="warning">Hello World</aq-text>
-            <aq-text class="text-md" variant="warning">Hello World</aq-text>
-            <aq-text class="text-sm" variant="warning">Hello World</aq-text>
-            <aq-text class="text-xs" variant="warning">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="warning">Hello World</aq-text>
+            <aq-text tag="h2" color="warning">Hello World</aq-text>
+            <aq-text tag="h3" color="warning">Hello World</aq-text>
+            <aq-text tag="h4" color="warning">Hello World</aq-text>
+            <aq-text tag="h5" color="warning">Hello World</aq-text>
+            <aq-text class="text-md" color="warning">Hello World</aq-text>
+            <aq-text class="text-sm" color="warning">Hello World</aq-text>
+            <aq-text class="text-xs" color="warning">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="danger">Hello World</aq-text>
-            <aq-text tag="h2" variant="danger">Hello World</aq-text>
-            <aq-text tag="h3" variant="danger">Hello World</aq-text>
-            <aq-text tag="h4" variant="danger">Hello World</aq-text>
-            <aq-text tag="h5" variant="danger">Hello World</aq-text>
-            <aq-text class="text-md" variant="danger">Hello World</aq-text>
-            <aq-text class="text-sm" variant="danger">Hello World</aq-text>
-            <aq-text class="text-xs" variant="danger">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="danger">Hello World</aq-text>
+            <aq-text tag="h2" color="danger">Hello World</aq-text>
+            <aq-text tag="h3" color="danger">Hello World</aq-text>
+            <aq-text tag="h4" color="danger">Hello World</aq-text>
+            <aq-text tag="h5" color="danger">Hello World</aq-text>
+            <aq-text class="text-md" color="danger">Hello World</aq-text>
+            <aq-text class="text-sm" color="danger">Hello World</aq-text>
+            <aq-text class="text-xs" color="danger">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="success">Hello World</aq-text>
-            <aq-text tag="h2" variant="success">Hello World</aq-text>
-            <aq-text tag="h3" variant="success">Hello World</aq-text>
-            <aq-text tag="h4" variant="success">Hello World</aq-text>
-            <aq-text tag="h5" variant="success">Hello World</aq-text>
-            <aq-text class="text-md" variant="success">Hello World</aq-text>
-            <aq-text class="text-sm" variant="success">Hello World</aq-text>
-            <aq-text class="text-xs" variant="success">Hello World</aq-text>
-          </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="success">Hello World</aq-text>
+            <aq-text tag="h2" color="success">Hello World</aq-text>
+            <aq-text tag="h3" color="success">Hello World</aq-text>
+            <aq-text tag="h4" color="success">Hello World</aq-text>
+            <aq-text tag="h5" color="success">Hello World</aq-text>
+            <aq-text class="text-md" color="success">Hello World</aq-text>
+            <aq-text class="text-sm" color="success">Hello World</aq-text>
+            <aq-text class="text-xs" color="success">Hello World</aq-text>
+          </aq-col>
 
-          <div class="m-4">
-            <aq-text tag="h1" variant="info">Hello World</aq-text>
-            <aq-text tag="h2" variant="info">Hello World</aq-text>
-            <aq-text tag="h3" variant="info">Hello World</aq-text>
-            <aq-text tag="h4" variant="info">Hello World</aq-text>
-            <aq-text tag="h5" variant="info">Hello World</aq-text>
-            <aq-text class="text-md" variant="info">Hello World</aq-text>
-            <aq-text class="text-sm" variant="info">Hello World</aq-text>
-            <aq-text class="text-xs" variant="info">Hello World</aq-text>
-          </div>
-        </div>
+          <aq-col size="3">
+            <aq-text tag="h1" color="info">Hello World</aq-text>
+            <aq-text tag="h2" color="info">Hello World</aq-text>
+            <aq-text tag="h3" color="info">Hello World</aq-text>
+            <aq-text tag="h4" color="info">Hello World</aq-text>
+            <aq-text tag="h5" color="info">Hello World</aq-text>
+            <aq-text class="text-md" color="info">Hello World</aq-text>
+            <aq-text class="text-sm" color="info">Hello World</aq-text>
+            <aq-text class="text-xs" color="info">Hello World</aq-text>
+          </aq-col>
+        </aq-row>
       </aq-card>
     </aq-container>
     </aq-theme>
