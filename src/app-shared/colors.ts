@@ -1,5 +1,34 @@
 import { css } from 'lit-element';
 
+export const sharedColors = {
+  primary: '#0072B5',
+  secondary: '#e9897e',
+  tertiary: '#e0b589',
+  neutral: '#939597',
+  warning: '#fdac53',
+  danger: '#d2386c',
+  success: '#00a170',
+  info: '#926aa6',
+  'on-primary': '#0072b5',
+  'on-secondary': '#e9897e',
+  'on-tertiary': '#e0b589',
+  'on-neutral': '#939597',
+  'on-warning': '#fdac53',
+  'on-danger': '#d2386c',
+  'on-success': '#00a170',
+  'on-info': '#926aa6',
+  'c-surface': '#F5F7FD',
+  'c-on-surface': '#09122F',
+  'c-bg': '#EDF1FF',
+  'c-on-bg': '#282D3C',
+  'c-light': '#efe1ce',
+  'c-dark': '#363945',
+  'c-on-light': '#efe1ce',
+  'c-on-dark': '#363945',
+  'c-on-btn': '#F5F7FD',
+
+};
+
 export const themeColors = css`
   :host {
     --c-surface: #F5F7FD;
