@@ -1,7 +1,7 @@
 import { customElement, LitElement, html, css, property } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
-import { textStyles } from '@shared';
+import { sharedColors, textStyles } from '@shared';
 import { prefix } from '@constants';
 
 enum allowedTags {
@@ -17,7 +17,7 @@ enum allowedTags {
 @customElement(`${prefix}-text`)
 export class Text extends LitElement {
   
-  @property() variant: string = '';
+  @property() color: string|null = null;
   @property() tag: keyof typeof allowedTags = 'p';
 
   static get styles() {
@@ -37,7 +37,9 @@ export class Text extends LitElement {
 
   render() {
     const tag = Object.keys(allowedTags).includes(this.tag) ? this.tag : 'p';
-    const style = this.variant ? `style="--color: var(--c-${this.variant});"` : '';
+    const color = this.color && Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
+
+    const style = `style="--color: ${color};"`;
     const template = `<${tag} ${style}><slot></slot></${tag}>`;
 
     return html`${
