@@ -14,6 +14,26 @@ enum allowedTags {
   p = 'p'
 }
 
+const getColor = (color: string|null) => {
+  if (color === null) return;
+  const c = Object.keys(sharedColors).includes(color) ? `var(--c-${color})` : color;
+  return html`
+    <style>
+      :host {
+        --color: ${c};
+      }
+    </style>
+  `;
+}
+
+const getTag = (tag: string) => {
+  const t = Object.keys(allowedTags).includes(tag) ? tag : 'p';
+  const template = `<${t}><slot></slot></${t}>`;
+  return html`
+    ${unsafeHTML(template)}
+  `;
+}
+
 @customElement(`${prefix}-text`)
 export class Text extends LitElement {
   
@@ -26,6 +46,7 @@ export class Text extends LitElement {
         :host {
           display: block;
         }
+
         p, h1, h2, h3, h4, h5, h6 {
           margin: var(--spc-0);
           color: var(--color);
@@ -36,14 +57,9 @@ export class Text extends LitElement {
   }
 
   render() {
-    const tag = Object.keys(allowedTags).includes(this.tag) ? this.tag : 'p';
-    const color = this.color && Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
-
-    const style = `style="--color: ${color};"`;
-    const template = `<${tag} ${style}><slot></slot></${tag}>`;
-
-    return html`${
-      unsafeHTML(template)
-    }`;
+    return html`
+      ${getColor(this.color)}
+      ${getTag(this.tag)}
+    `;
   }
 }
