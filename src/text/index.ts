@@ -1,7 +1,7 @@
-import { customElement, LitElement, html, css, property } from 'lit-element';
+import { customElement, html, css, property } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
-import { sharedColors, textStyles } from '@shared';
+import { VariantManager, textStyles } from '@shared';
 import { prefix } from '@constants';
 
 enum allowedTags {
@@ -14,18 +14,6 @@ enum allowedTags {
   p = 'p'
 }
 
-const getColor = (color: string|null) => {
-  if (color === null) return;
-  const c = Object.keys(sharedColors).includes(color) ? `var(--c-${color})` : color;
-  return html`
-    <style>
-      :host {
-        --color: ${c};
-      }
-    </style>
-  `;
-}
-
 const getTag = (tag: string) => {
   const t = Object.keys(allowedTags).includes(tag) ? tag : 'p';
   const template = `<${t}><slot></slot></${t}>`;
@@ -35,7 +23,7 @@ const getTag = (tag: string) => {
 }
 
 @customElement(`${prefix}-text`)
-export class Text extends LitElement {
+export class Text extends VariantManager {
   
   @property() color: string|null = null;
   @property() tag: keyof typeof allowedTags = 'p';
@@ -57,9 +45,6 @@ export class Text extends LitElement {
   }
 
   render() {
-    return html`
-      ${getColor(this.color)}
-      ${getTag(this.tag)}
-    `;
+    return this.withVariant(getTag(this.tag));
   }
 }
