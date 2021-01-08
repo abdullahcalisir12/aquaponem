@@ -69,4 +69,8 @@ export const buttonStyles = css`
     color: var(--c-on-btn);
     background-color: var(--color);
   }
+
+  :host([block]) {
+    width: 100%;
+  }
 `
