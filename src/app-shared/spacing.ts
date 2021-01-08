@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
 const defaultSpacings = {
   0: '0',
@@ -28,7 +28,7 @@ const defaultSpacings = {
   96: '24rem',
 }
 
-export const spacing = css`
+export const spacing: CSSResult = css`
   :host {
     --spc-0: 0;
     --spc-1: .25rem;
