@@ -1,4 +1,4 @@
-import { html, customElement, property } from 'lit-element';
+import { html, customElement, property, TemplateResult } from 'lit-element';
 
 import { prefix } from '@constants';
 import { Base } from './base';
@@ -9,7 +9,7 @@ export class Link extends Base {
   @property() href: string = '#';
   @property() label: string = 'anchor';
 
-  render() {
+  render(): TemplateResult{
     return html`
       ${this.styles}
       <a
