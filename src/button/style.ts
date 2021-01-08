@@ -1,6 +1,6 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
-export const buttonStyles = css`
+export const buttonStyles: CSSResult = css`
   :host {
     display: inline-block;
   }
