@@ -30,7 +30,6 @@ export class Select extends FieldWrapper {
     return html`
       <style>
         fieldset {
-          border-bottom: none !important;
           border-bottom-left-radius: 0 !important;
           border-bottom-right-radius: 0 !important;
           background-color: var(--c-dark) !important;
