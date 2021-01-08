@@ -1,12 +1,11 @@
-import { LitElement, property } from 'lit-element';
+import { html, property } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
-import { sharedColors } from '@shared';
+import { VariantManager } from '@shared';
 import { buttonStyles } from './style';
 
-export class Base extends LitElement {
+export class Base extends VariantManager {
   @property() round: string = 'md';
   @property() size: string = 'base';
-  @property() color: string|null = null;
 
   static get styles() {
     return [
@@ -19,10 +18,12 @@ export class Base extends LitElement {
   }
 
   public get styles() {
-    const color = this.color && Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
-    return `
-      --color: ${color};
-      --btn-br: var(--br-${this.round})
-    `;
+    return this.withVariant(html`
+      <style>
+        :host {
+          --btn-br: var(--br-${this.round})
+        }
+      </style>
+  `);
   }
 }
