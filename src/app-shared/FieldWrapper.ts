@@ -9,6 +9,7 @@ export class FieldWrapper extends VariantManager {
       :host {
         display: block;
       }
+
       fieldset {
         all: unset;
         display: flex;
@@ -23,7 +24,7 @@ export class FieldWrapper extends VariantManager {
         color: var(--color);
       }
 
-      input, select, textarea {
+      input, textarea, .select-container {
         all: unset;
         display: block;
         height: 100%;

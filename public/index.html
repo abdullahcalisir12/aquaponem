@@ -20,14 +20,6 @@
     <aq-app>
       <aq-theme dark>
         <aq-container size="lg">
-          <aq-row>
-            <aq-col>
-              <aq-card color="dark">
-                <aq-input label="Input" color="primary"></aq-input>
-                <aq-input multiline label="Input" color="primary"></aq-input>
-              </aq-card>
-            </aq-col>
-          </aq-row>
           <aq-row column="16" gutters="16">
             <aq-col size="4">1</aq-col>
             <aq-col size="4">2</aq-col>
@@ -39,6 +31,18 @@
             <aq-col size="4">2</aq-col>
             <aq-col size="4">3</aq-col>
             <aq-col size="4">4</aq-col>
+          </aq-row>
+          <aq-row>
+            <aq-col>
+              <aq-card color="dark">
+                <aq-input label="Input" color="primary"></aq-input>
+                <aq-input multiline label="Textarea" color="primary"></aq-input>
+                <aq-select label="Select" color="primary">
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                </aq-select>
+              </aq-card>
+            </aq-col>
           </aq-row>
           <aq-text tag="h3">Color Palette</aq-text>
           <aq-row column="16" gutters="24,12">
