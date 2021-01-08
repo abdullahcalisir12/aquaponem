@@ -1,11 +1,11 @@
-import { html, css, customElement } from 'lit-element';
+import { html, css, customElement, CSSResultArray, TemplateResult } from 'lit-element';
 import { prefix } from '@constants';
 import { VariantManager } from '@/app-shared';
 
 @customElement(`${prefix}-card`)
 export class Card extends VariantManager {
 
-  static get styles() {
+  static get styles(): CSSResultArray {
     return [
       css`
         :host {
@@ -35,7 +35,7 @@ export class Card extends VariantManager {
     ];
   }
 
-  render() {
+  render(): TemplateResult{
     return this.withVariant(html`
       <div class="card">
         <slot name="header"></slot>
