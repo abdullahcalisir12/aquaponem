@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
 export const defaultBreakpoints = {
   sm: '768px',
@@ -8,7 +8,7 @@ export const defaultBreakpoints = {
   '2xl': '1920px',
 };
 
-export const breakpoints = css`
+export const breakpoints: CSSResult = css`
   :host {
     --bp-sm: 768px;
     --bp-md: 1024px;
