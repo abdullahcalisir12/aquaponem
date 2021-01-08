@@ -1,4 +1,4 @@
-import { customElement, html, css, property } from 'lit-element';
+import { customElement, html, css, property, TemplateResult, CSSResultArray } from 'lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 import { VariantManager, textStyles } from '@shared';
@@ -14,9 +14,9 @@ enum allowedTags {
   p = 'p'
 }
 
-const getTag = (tag: string) => {
-  const t = Object.keys(allowedTags).includes(tag) ? tag : 'p';
-  const template = `<${t}><slot></slot></${t}>`;
+const getTag = (tag: string): TemplateResult => {
+  const t: string = Object.keys(allowedTags).includes(tag) ? tag : 'p';
+  const template: string = `<${t}><slot></slot></${t}>`;
   return html`
     ${unsafeHTML(template)}
   `;
@@ -28,7 +28,7 @@ export class Text extends VariantManager {
   @property() color: string|null = null;
   @property() tag: keyof typeof allowedTags = 'p';
 
-  static get styles() {
+  static get styles(): CSSResultArray{
     return [
       css`
         :host {
@@ -44,7 +44,7 @@ export class Text extends VariantManager {
     ];
   }
 
-  render() {
+  render(): TemplateResult{
     return this.withVariant(getTag(this.tag));
   }
 }
