@@ -1,6 +1,6 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
-export const textStyles = css`
+export const textStyles: CSSResult = css`
   h1 {
     font-weight: var(--fw-s);
     font-size: var(--spc-12);
@@ -42,13 +42,13 @@ export const textStyles = css`
   }
 `;
 
-export const fontFamily = css`
+export const fontFamily: CSSResult = css`
   :host {
     --f-family: 'Poppins';
   }
 `;
 
-export const fontWeight = css`
+export const fontWeight: CSSResult = css`
   :host {
     --fw-t: 200; /* thin */
     --fw-l: 300; /* light */
