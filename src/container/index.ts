@@ -1,4 +1,4 @@
-import { LitElement, html, customElement, property } from 'lit-element';
+import { LitElement, html, customElement, property, CSSResultArray, TemplateResult } from 'lit-element';
 import { containerStyle } from './style';
 import { prefix } from '@constants';
 import { classMap } from 'lit-html/directives/class-map';
@@ -7,13 +7,13 @@ import { classMap } from 'lit-html/directives/class-map';
 export class Container extends LitElement {
   @property() size: string = 'fluid';
 
-  static get styles() {
+  static get styles(): CSSResultArray{
     return [
       containerStyle,
     ];
   }
 
-  render() {
+  render(): TemplateResult{
     return html`
       <div class="${classMap({
           container: true,
