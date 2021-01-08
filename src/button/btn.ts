@@ -1,4 +1,4 @@
-import { html, customElement, property } from 'lit-element';
+import { html, customElement, property, TemplateResult } from 'lit-element';
 
 import { Base } from './base';
 import { prefix } from '@constants';
@@ -8,7 +8,7 @@ export class Button extends Base {
 
   @property() label: string = 'button';
 
-  render() {
+  render(): TemplateResult {
     return html`
       ${this.styles}
       <button
