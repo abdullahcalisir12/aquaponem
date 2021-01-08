@@ -1,6 +1,6 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
-export const containerStyle = css`
+export const containerStyle: CSSResult = css`
   :host {
     display: block;
   }
