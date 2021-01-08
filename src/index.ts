@@ -6,3 +6,4 @@ export { Column } from '@/column';
 export { Card } from '@/card';
 export { Text } from '@/text';
 export { Button, Link } from '@/button';
+export { Input } from '@/input';
