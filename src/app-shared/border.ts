@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css, CSSResult } from 'lit-element';
 
 const defaultBorderRadius = {
   'none': '0',
@@ -17,7 +17,7 @@ const defaultBorderWidth = {
   4: '4px',
 }
 
-export const borderRadius = css`
+export const borderRadius: CSSResult= css`
   :host {
     --br-none: 0;
     --br-sm: .25rem;
@@ -28,7 +28,7 @@ export const borderRadius = css`
   }
 `;
 
-export const borderWidth = css`
+export const borderWidth: CSSResult= css`
   :host {
     --bw-none: 0;
     --bw-1: 1px;
