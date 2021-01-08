@@ -10,10 +10,10 @@ export class Button extends Base {
 
   render() {
     return html`
+      ${this.styles}
       <button
         aria-label=${this.label}
         class="${this.classes}"
-        style="${this.styles}"
       >
         <slot></slot>
       </button>

@@ -11,11 +11,11 @@ export class Link extends Base {
 
   render() {
     return html`
+      ${this.styles}
       <a
         aria-label=${this.label}
         href="${this.href}"
         class="${this.classes}"
-        style="${this.styles}"
       >
         <slot></slot>
       </a>
