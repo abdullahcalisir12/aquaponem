@@ -24,7 +24,7 @@ export class FieldWrapper extends VariantManager {
         color: var(--color);
       }
 
-      input, textarea, .select-container {
+      input, textarea {
         all: unset;
         display: block;
         height: 100%;

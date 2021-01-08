@@ -12,6 +12,7 @@ export class Select extends FieldWrapper {
       <style>
         .select-container {
           position: relative;
+          width: 100%;
         }
         .select {
           display: flex;
@@ -46,28 +47,31 @@ export class Select extends FieldWrapper {
           border-radius:  0 0 var(--br-md) var(--br-md);
           margin: 0 -2px;
           background-color: var(--c-dark);
+          z-index: 1;
         }
 
-        .options {
-          border-top: 1px solid var(--color);
-          margin: 0rem 1.5rem;
+        ::slotted(div) {
+          cursor: pointer;
+          padding: 1rem 1.5rem;
         }
 
-        .options ::slotted(option) {
-          margin: 1rem 0;
+        ::slotted(div:hover) {
+          background-color: var(--c-bg);
+        }
+
+        ::slotted(div:last-child:hover) {
+          border-bottom-left-radius: var(--br-md);
+          border-bottom-right-radius: var(--br-md);
         }
       </style>
     `;
   }
 
-  constructor() {
-    super();
-    this.addEventListener('click', this._handleClick);
-  }
-
-  disconnectedCallback() {
-    this.removeEventListener('click', this._handleClick);
-    super.disconnectedCallback();
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('click', () => {
+      this.focused = false;
+    });
   }
 
   render(): TemplateResult {
@@ -75,10 +79,10 @@ export class Select extends FieldWrapper {
       ${this._selectStyles}
       ${this.focused ? this._focusedFieldset : ''}
       <div
-        class="select-container">
+        class="select-container"
+        @click="${this._handleClick}">
         <div class="select">
-          <div class="selected">Selected Value</div>
-          <i>V</i>
+          <input />
         </div>
         <div class="options-container">
           <div class="options">
@@ -89,7 +93,8 @@ export class Select extends FieldWrapper {
     `);
   }
 
-  _handleClick() {
+  _handleClick(e: any) {
+    e.stopPropagation();
     this.focused = true;
   }
 }
