@@ -1,4 +1,17 @@
-import { css } from 'lit-element';
+import { css, html, LitElement, property, TemplateResult } from 'lit-element';
+
+export class VariantManager extends LitElement {
+  @property() color: string|null = null;
+
+  public withVariant(template: TemplateResult) {
+    if (!this.color) return html`${template}`;
+    const c = Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
+    return html`
+      <style> :host { --color: ${c}; }</style>
+      ${template}
+    `;
+  }
+}
 
 export const sharedColors = {
   primary: '#0072B5',
@@ -17,15 +30,15 @@ export const sharedColors = {
   'on-danger': '#d2386c',
   'on-success': '#00a170',
   'on-info': '#926aa6',
-  'c-surface': '#F5F7FD',
-  'c-on-surface': '#09122F',
-  'c-bg': '#EDF1FF',
-  'c-on-bg': '#282D3C',
-  'c-light': '#efe1ce',
-  'c-dark': '#363945',
-  'c-on-light': '#efe1ce',
-  'c-on-dark': '#363945',
-  'c-on-btn': '#F5F7FD',
+  'surface': '#F5F7FD',
+  'on-surface': '#09122F',
+  'bg': '#EDF1FF',
+  'on-bg': '#282D3C',
+  'light': '#efe1ce',
+  'dark': '#363945',
+  'on-light': '#efe1ce',
+  'on-dark': '#363945',
+  'on-btn': '#F5F7FD',
 
 };
 
