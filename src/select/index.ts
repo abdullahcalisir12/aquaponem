@@ -22,7 +22,7 @@ export class Select extends LitElement {
           border-width: 0 2px 2px;
           border-radius:  0 0 var(--br-md) var(--br-md);
           margin: 0 -2px;
-          background-color: var(--c-dark);
+          background-color: var(--bg-color);
           z-index: 1;
           box-shadow: 0 16px 32px -1px rgba(0,0,0,0.5);
         }
