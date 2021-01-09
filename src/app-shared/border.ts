@@ -1,6 +1,6 @@
 import { css, CSSResult } from 'lit-element';
 
-type borderRadius = {
+type BorderRadius = {
   none: string,
   sm: string,
   md: string,
@@ -9,7 +9,7 @@ type borderRadius = {
   full: string,
 }
 
-const defaultBorderRadius: borderRadius = {
+const defaultBorderRadius: BorderRadius = {
   none: '0',
   sm: '.25rem',
   md: '.5rem',
@@ -18,7 +18,7 @@ const defaultBorderRadius: borderRadius = {
   full: '9999px',
 }
 
-type borderWidth = {
+type BorderWidth = {
   none: string,
   1: string,
   2: string,
@@ -26,7 +26,7 @@ type borderWidth = {
   4: string,
 }
 
-const defaultBorderWidth: borderWidth = {
+const defaultBorderWidth: BorderWidth = {
   none: '0',
   1: '1px',
   2: '2px',

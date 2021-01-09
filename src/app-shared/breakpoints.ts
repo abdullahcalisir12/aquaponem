@@ -1,6 +1,14 @@
 import { css, CSSResult } from 'lit-element';
 
-export const defaultBreakpoints = {
+type Breakpoints = {
+  sm: string,
+  md: string,
+  lg: string,
+  xl: string,
+  '2xl': string,
+}
+
+export const defaultBreakpoints: Breakpoints = {
   sm: '768px',
   md: '1024px',
   lg: '1280px',
