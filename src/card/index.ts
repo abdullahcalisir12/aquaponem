@@ -15,7 +15,8 @@ export class Card extends VariantManager {
         .card {
           display: flex;
           flex-direction: column;
-          background-color: var(--color);
+          background-color: var(--bg-color);
+          color: var(--color);
           border-radius: var(--br-lg);
           padding: var(--spc-5) var(--spc-6);
         }
