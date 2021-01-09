@@ -1,4 +1,4 @@
-import { LitElement, html, customElement, css } from 'lit-element';
+import { LitElement, html, customElement, css, CSSResultArray, TemplateResult } from 'lit-element';
 
 import {
   colors,
@@ -13,7 +13,7 @@ import { prefix } from '@constants';
 @customElement(`${prefix}-app`)
 export class App extends LitElement {
 
-  static get styles() {
+  static get styles(): CSSResultArray {
     return [
       colors,
       spacing,
@@ -30,7 +30,7 @@ export class App extends LitElement {
     ];
   }
 
-  render() {
+  render(): TemplateResult{
     return html`
       <slot></slot>
     `;
