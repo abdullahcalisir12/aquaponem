@@ -8,3 +8,6 @@ export { Text } from '@/text';
 export { Button, Link } from '@/button';
 export { Input } from '@/input';
 export { Select } from '@/select';
+export { Checkbox } from '@/checkbox';
+export { Radio } from '@/radio';
+export { FieldWrapper } from '@/form';
