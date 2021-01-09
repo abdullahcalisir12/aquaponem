@@ -1,6 +1,6 @@
 import { html, css, customElement, CSSResultArray, TemplateResult } from 'lit-element';
 import { prefix } from '@constants';
-import { VariantManager } from '@/app-shared';
+import { VariantManager } from '@shared';
 
 @customElement(`${prefix}-card`)
 export class Card extends VariantManager {
