@@ -38,11 +38,11 @@ export class FieldWrapper extends VariantManager {
   }
 
   render() {
-    return this.withVariant(html`
+    return html`
       <fieldset part="fieldset">
         <legend part="legend">${this.label}</legend>
         <slot></slot>
       </fieldset>
-    `);
+    `;
   }
 }

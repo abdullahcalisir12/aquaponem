@@ -45,6 +45,6 @@ export class Text extends VariantManager {
   }
 
   render(): TemplateResult{
-    return this.withVariant(getTag(this.tag));
+    return getTag(this.tag);
   }
 }

@@ -36,7 +36,7 @@ export class Card extends VariantManager {
   }
 
   render(): TemplateResult{
-    return this.withVariant(html`
+    return html`
       <div class="card">
         <slot name="header"></slot>
         <div class="body">
@@ -44,6 +44,6 @@ export class Card extends VariantManager {
         </div>
         <slot name="footer"></slot>
       </div>
-    `);
+    `;
   }
 }
