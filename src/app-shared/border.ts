@@ -34,7 +34,7 @@ const defaultBorderWidth: BorderWidth = {
   4: '4px',
 }
 
-export const borderRadius: CSSResult= css`
+export const borderRadius: CSSResult = css`
   :host {
     --br-none: 0;
     --br-sm: .25rem;
@@ -45,7 +45,7 @@ export const borderRadius: CSSResult= css`
   }
 `;
 
-export const borderWidth: CSSResult= css`
+export const borderWidth: CSSResult = css`
   :host {
     --bw-none: 0;
     --bw-1: 1px;

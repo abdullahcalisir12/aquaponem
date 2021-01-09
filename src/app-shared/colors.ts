@@ -1,15 +1,13 @@
-import { css, CSSResult, html, LitElement, property, TemplateResult } from 'lit-element';
+import { css, CSSResult, LitElement, property } from 'lit-element';
 
 export class VariantManager extends LitElement {
   @property() color: string|null = null;
 
-  public withVariant(template: TemplateResult): TemplateResult {
-    if (!this.color) return html`${template}`;
-    const c = Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
-    return html`
-      <style> :host { --color: ${c}; }</style>
-      ${template}
-    `;
+  updated(changedProperties: Map<string, string>) {
+    if (this.color && changedProperties.has('color')) {
+      const c = Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
+      this.style.setProperty('--color', c);
+    };
   }
 }
 
@@ -39,7 +37,6 @@ export const sharedColors = {
   'on-light': '#efe1ce',
   'on-dark': '#363945',
   'on-btn': '#F5F7FD',
-
 };
 
 export const themeColors: CSSResult = css`
