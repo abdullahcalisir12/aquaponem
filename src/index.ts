@@ -1,6 +1,7 @@
 export { App } from '@/app';
 export { Theme } from '@/theme';
 export { Container } from '@/container';
+export { Grid, GridItem } from '@/grid';
 export { Row } from '@/row';
 export { Column } from '@/column';
 export { Card } from '@/card';
