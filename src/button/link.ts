@@ -11,7 +11,6 @@ export class Link extends Base {
 
   render(): TemplateResult{
     return html`
-      ${this.styles}
       <a
         aria-label=${this.label}
         href="${this.href}"

@@ -10,7 +10,6 @@ export class Button extends Base {
 
   render(): TemplateResult {
     return html`
-      ${this.styles}
       <button
         aria-label=${this.label}
         class="${this.classes}"

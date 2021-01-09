@@ -17,13 +17,10 @@ export class Base extends VariantManager {
     return classMap({ [`btn-s-${this.size}`]: true });
   }
 
-  public get styles(): TemplateResult {
-    return this.withVariant(html`
-      <style>
-        :host {
-          --btn-br: var(--br-${this.round})
-        }
-      </style>
-  `);
+  updated(changedProperties: Map<string, string>) {
+    if (this.round && changedProperties.has('round')) {
+      this.style.setProperty('--btn-br', `var(--br-${this.round})`);
+    };
+    super.updated(changedProperties);
   }
 }
