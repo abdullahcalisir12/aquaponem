@@ -15,10 +15,10 @@ export class Container extends LitElement {
 
   render(): TemplateResult{
     return html`
-      <div class="${classMap({
+      <div class=${classMap({
           container: true,
           [`container-${this.size}`]: true,
-        })}">
+        })}>
         <slot></slot>
       </div>
     `;
