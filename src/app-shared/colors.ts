@@ -2,12 +2,20 @@ import { css, CSSResult, LitElement, property } from 'lit-element';
 
 export class VariantManager extends LitElement {
   @property() color: string|null = null;
+  @property() 'bg-color': string|null = null;
 
   updated(changedProperties: Map<string, string>) {
     if (this.color && changedProperties.has('color')) {
-      const c = Object.keys(sharedColors).includes(this.color) ? `var(--c-${this.color})` : this.color;
-      this.style.setProperty('--color', c);
+      this._updateColor('--color', this.color);
     };
+    if (this['bg-color'] && changedProperties.has('bg-color')) {
+      this._updateColor('--bg-color', this['bg-color']);
+    };
+  }
+
+  private _updateColor(property: string, value: string): void {
+    const c = Object.keys(sharedColors).includes(value) ? `var(--c-${value})` : value;
+    this.style.setProperty(property, c);
   }
 }
 
