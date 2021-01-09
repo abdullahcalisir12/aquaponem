@@ -17,7 +17,7 @@ export class FieldWrapper extends VariantManager {
         position: relative;
         border: 2px solid var(--color);
         border-radius: var(--br-md);
-        background-color: var(--c-dark) !important;
+        background-color: var(--bg-color) !important;
       }
 
       legend {
