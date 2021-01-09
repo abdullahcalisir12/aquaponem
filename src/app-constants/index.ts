@@ -1,1 +1,1 @@
-export const prefix = 'aq';
+export const prefix: string = 'aq';
