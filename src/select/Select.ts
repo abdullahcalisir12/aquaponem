@@ -23,17 +23,18 @@ export class Select extends LitElement {
 
   connectedCallback() {
     this.options = this.querySelectorAll(`${prefix}-option`);
+    window.addEventListener('click', () => this.focused = false);
     this.options?.forEach(option => {
-      option.addEventListener('option-clicked', ((e: CustomEvent) => {
-          this.value = e.detail.value;
-          this._onBlur();
-        }) as EventListener
-      );
+      option.addEventListener('option-clicked', (e: any) => {
+        this.value = e.detail.value;
+        this._onBlur();
+      });
     })
     super.connectedCallback();
   }
 
   disconnectedCallback() {
+    window.removeEventListener('click', () => this.focused = false);
     this.options?.forEach(option => {
       option.removeEventListener('option-clicked', (e) => {console.log(e)});
     })
@@ -41,9 +42,7 @@ export class Select extends LitElement {
   }
 
   _onBlur() {
-    setTimeout(() => {
-      this.focused = false;
-    }, 150);
+    this.focused = false;
   }
 
   _onFocus() {
@@ -54,11 +53,15 @@ export class Select extends LitElement {
     this.value = e.target.value;
   }
 
+  _stop(e: MouseEvent) {
+    e.stopPropagation();
+  }
+
   render(): TemplateResult {
     return html`
       ${this.focused ? this._focusedFieldset : ''}
-      <field-wrapper color=${this.color} legend=${this.label}>
-        <input @focus=${this._onFocus} @blur=${this._onBlur} .value=${this.value} @input=${this._onInput} />
+      <field-wrapper color=${this.color} legend=${this.label} @click=${this._stop}>
+        <input @focus=${this._onFocus} .value=${this.value} @input=${this._onInput} />
         <div class="select-container">
           <div class="options-container ${classMap({open: this.focused})}">
             <div class="options">
