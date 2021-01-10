@@ -22,11 +22,11 @@ export class Option extends LitElement {
   }
 
   _click() {
-    let event = new CustomEvent('option-clicked', {
+    let event = new CustomEvent('option-click', {
       detail: {
         message: 'option clicked',
-        value: this.value
-      }
+      },
+      bubbles: true,
     });
     this.dispatchEvent(event);
   }
