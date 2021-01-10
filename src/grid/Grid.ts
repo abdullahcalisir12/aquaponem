@@ -1,6 +1,6 @@
-import { prefix } from "@/app-constants";
 import { css, customElement, html, LitElement, property } from "lit-element";
 import { styleMap } from "lit-html/directives/style-map";
+import { prefix } from "@constants";
 
 @customElement(`${prefix}-grid`)
 export class Grid extends LitElement {

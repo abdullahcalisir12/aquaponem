@@ -1,5 +1,5 @@
-import { prefix } from "@/app-constants";
 import { css, customElement, html, LitElement } from "lit-element";
+import { prefix } from "@constants";
 
 @customElement(`${prefix}-radio`)
 export class Radio extends LitElement {

@@ -1,5 +1,5 @@
-import { prefix } from "@/app-constants";
 import { customElement, html, LitElement, property } from "lit-element";
+import { prefix } from "@constants";
 
 @customElement(`${prefix}-grid-item`)
 export class GridItem extends LitElement {
