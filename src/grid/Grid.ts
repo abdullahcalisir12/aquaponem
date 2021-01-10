@@ -7,10 +7,10 @@ export class Grid extends LitElement {
   @property() rows!: string;
   @property() cols!: string;
   @property() areas!: string;
-  @property() gap: string = "1rem";
-  @property() items: string = "center"; // position of item inside box => align-items , justify-items => start | end | center | stretch
-  @property() content: string = "center"; // position of grid container inside of its container => align-content / justify-content => start | end | center | stretch | space-around | space-between | space-evenly
-  @property() flow: string = "row";
+  @property() gap!: string;
+  @property() items!: string; // position of item inside box => align-items , justify-items => start | end | center | stretch
+  @property() content!: string; // position of grid container inside of its container => align-content / justify-content => start | end | center | stretch | space-around | space-between | space-evenly
+  @property() flow!: string;
 
   static get styles() {
     return css`
