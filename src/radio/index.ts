@@ -1,8 +1,10 @@
-import { css, customElement, html, LitElement } from "lit-element";
+import { css, customElement, html, LitElement, property } from "lit-element";
 import { prefix } from "@constants";
 import { style } from "@/checkbox/style";
 @customElement(`${prefix}-radio`)
 export class Radio extends LitElement {
+  @property() name!: string;
+  @property() label!: string;
   static get styles() {
     return [
       style,
@@ -24,9 +26,9 @@ export class Radio extends LitElement {
   render() {
     return html`
       <label class="container">
-        Two
-        <input type="radio" name="radio">
+        <input type="radio" name=${this.name}>
         <span class="checkmark"></span>
+        <slot>${this.label}</slot>
       </label>
     `;
   }

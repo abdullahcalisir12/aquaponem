@@ -15,7 +15,6 @@ export class Select extends LitElement {
         field-wrapper::part(fieldset) {
           border-bottom-left-radius: 0 !important;
           border-bottom-right-radius: 0 !important;
-          border-bottom: 0 !important;
         }
       </style>
     `;
