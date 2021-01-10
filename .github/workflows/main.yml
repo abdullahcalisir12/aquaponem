@@ -21,18 +21,19 @@ jobs:
           restore-keys: |
             nodeModules-
 
-        - name: Install dependencies
-          run: yarn install --frozen-lockfile
-          env:
-            CI: true
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          CI: true
 
-        - name: Build
-          run: yarn build
-          env:
-            CI: true
+      - name: Build
+        run: yarn build
+        env:
+          CI: true
 
-        - name: Publish
-          if: startsWith(github.ref, 'refs/tags/')
-          run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc && npm publish --access public
-          env:
-            NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish
+        if: startsWith(github.ref, 'refs/tags/')
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc && npm publish --access public
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          
