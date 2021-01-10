@@ -1,5 +1,5 @@
-import { prefix } from "@/app-constants";
 import { css, customElement, html, LitElement } from "lit-element";
+import { prefix } from "@constants";
 
 @customElement(`${prefix}-checkbox`)
 export class Checkbox extends LitElement {
@@ -22,8 +22,6 @@ export class Checkbox extends LitElement {
         position: absolute;
         opacity: 0;
         cursor: pointer;
-        height: 0;
-        width: 0;
       }
 
       .checkmark {
