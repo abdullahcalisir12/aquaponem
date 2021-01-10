@@ -3,7 +3,7 @@ import { html, css, property, CSSResult, customElement } from "lit-element";
 
 @customElement('field-wrapper')
 export class FieldWrapper extends VariantManager {
-  @property() label: string = '';
+  @property() legend: string = '';
 
   static get styles(): CSSResult {
     return css`
@@ -40,7 +40,7 @@ export class FieldWrapper extends VariantManager {
   render() {
     return html`
       <fieldset part="fieldset">
-        <legend part="legend">${this.label}</legend>
+        <legend part="legend">${this.legend}</legend>
         <slot></slot>
       </fieldset>
     `;
