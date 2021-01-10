@@ -4,11 +4,11 @@ import { prefix } from "@constants";
 
 @customElement(`${prefix}-select`)
 export class Select extends LitElement {
-  @property() label: string = '';
-  @property() color: string = '';
+  @property() label!: string;
+  @property() color!: string;
   @internalProperty() focused: boolean = false;
   @internalProperty() value: string = '';
-  @internalProperty() options: NodeListOf<HTMLButtonElement>|undefined;
+  @internalProperty() options!: NodeListOf<HTMLButtonElement>;
 
   private get _focusedFieldset(): TemplateResult {
     return html`
@@ -24,10 +24,11 @@ export class Select extends LitElement {
   connectedCallback() {
     this.options = this.querySelectorAll(`${prefix}-option`);
     this.options?.forEach(option => {
-      option.addEventListener('option-clicked', (e: any) => {
-        this.value = e.detail.value;
-        this._onBlur();
-      });
+      option.addEventListener('option-clicked', ((e: CustomEvent) => {
+          this.value = e.detail.value;
+          this._onBlur();
+        }) as EventListener
+      );
     })
     super.connectedCallback();
   }
@@ -39,17 +40,17 @@ export class Select extends LitElement {
     super.disconnectedCallback();
   }
 
-  _onBlur(e: any = undefined) {
+  _onBlur() {
     setTimeout(() => {
       this.focused = false;
     }, 150);
   }
 
-  _onFocus(e: any) {
+  _onFocus() {
     this.focused = true;
   }
 
-  _onInput(e: any) {
+  _onInput(e: { target: HTMLInputElement }) {
     this.value = e.target.value;
   }
 
@@ -84,7 +85,7 @@ export class Select extends LitElement {
           border: solid var(--color);
           border-width: 0 2px 2px;
           border-radius:  0 0 var(--br-md) var(--br-md);
-          padding: .5rem 0;
+          padding-bottom: .5rem;
           margin: 0 -2px;
           background-color: var(--bg-color);
           z-index: 1;

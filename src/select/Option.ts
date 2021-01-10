@@ -3,7 +3,7 @@ import { css, CSSResult, customElement, property, LitElement, html, TemplateResu
 
 @customElement(`${prefix}-option`)
 export class Option extends LitElement {
-  @property() value: string|undefined;
+  @property() value!: string;
 
   static get styles(): CSSResult{
     return css`
@@ -27,7 +27,7 @@ export class Option extends LitElement {
     `;
   }
 
-  _click(value: string|undefined) {
+  _click(value: string) {
     let event = new CustomEvent('option-clicked', {
       detail: {
         message: 'Something important happened',

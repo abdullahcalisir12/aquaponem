@@ -25,7 +25,7 @@ const getTag = (tag: string): TemplateResult => {
 @customElement(`${prefix}-text`)
 export class Text extends VariantManager {
   
-  @property() color: string|null = null;
+  @property() color!: string;
   @property() tag: keyof typeof allowedTags = 'p';
 
   static get styles(): CSSResultArray{

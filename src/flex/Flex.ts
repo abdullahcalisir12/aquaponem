@@ -6,10 +6,10 @@ import { styleMap } from "lit-html/directives/style-map";
 export class Flex extends LitElement {
   @property() column: string = '12';
   @property() gutters: string = '0px';
-  @property() flow: string = ''; // flex-direction, flex-wrap
-  @property() justify: string = '';
-  @property() items: string = '';
-  @property() content: string = '';
+  @property() flow!: string; // flex-direction, flex-wrap
+  @property() justify!: string;
+  @property() items!: string;
+  @property() content!: string;
 
   static get styles() {
     return css`

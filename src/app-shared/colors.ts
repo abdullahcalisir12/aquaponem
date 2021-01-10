@@ -1,8 +1,8 @@
 import { css, CSSResult, LitElement, property } from 'lit-element';
 
 export class VariantManager extends LitElement {
-  @property() color: string|null = null;
-  @property() 'bg-color': string|null = null;
+  @property() color!: string;
+  @property() 'bg-color'!: string;
 
   updated(changedProperties: Map<string, string>) {
     if (this.color && changedProperties.has('color')) {

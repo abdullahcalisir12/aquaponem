@@ -4,8 +4,8 @@ import { html, customElement, LitElement, property, TemplateResult} from "lit-el
 @customElement(`${prefix}-input`)
 export class Input extends LitElement {
   @property({ type: Boolean, reflect: true }) multiline = false;
-  @property() label: string = '';
-  @property() color: string = '';
+  @property() label!: string;
+  @property() color!: string;
 
   render(): TemplateResult {
     return html`

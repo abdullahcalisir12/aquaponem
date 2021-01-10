@@ -3,7 +3,7 @@ import { html, css, property, CSSResult, customElement } from "lit-element";
 
 @customElement('field-wrapper')
 export class FieldWrapper extends VariantManager {
-  @property() legend: string = '';
+  @property() legend!: string;
 
   static get styles(): CSSResult {
     return css`

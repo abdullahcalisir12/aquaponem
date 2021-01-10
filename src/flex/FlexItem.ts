@@ -3,9 +3,9 @@ import { prefix } from '@constants';
 @customElement(`${prefix}-flex-item`)
 export class FlexItem extends LitElement {
   @property() size: number = 12;
-  @property() self: string|undefined;
-  @property() flex: string|undefined;
-  @property() order: string|undefined;
+  @property() self!: string;
+  @property() flex!: string;
+  @property() order!: string;
 
   static get styles() {
     return css`

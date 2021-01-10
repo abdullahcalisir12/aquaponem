@@ -3,10 +3,10 @@ import { prefix } from "@constants";
 
 @customElement(`${prefix}-grid-item`)
 export class GridItem extends LitElement {
-  @property() col: string|undefined;
-  @property() row: string|undefined;
-  @property() area: string|undefined;
-  @property() place: string|undefined = 'center';
+  @property() col!: string;
+  @property() row!: string;
+  @property() area!: string;
+  @property() place!: string;
 
   updated(changedProperties: Map<string, string>) {
     if (this.col && changedProperties.has('col')) this.style.gridColumn = this.col;
