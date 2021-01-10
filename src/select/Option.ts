@@ -7,8 +7,10 @@ export class Option extends LitElement {
 
   static get styles(): CSSResult{
     return css`
-      .option {
+      :host {
         display: block;
+      }
+      .option {
         cursor: pointer;
         padding: 1rem 1.5rem;
       }
@@ -19,21 +21,21 @@ export class Option extends LitElement {
     `;
   }
 
-  render(): TemplateResult {
-    return html`
-      <div class="option" @click=${() => this._click(this.value)}>
-        <slot></slot>
-      </div>
-    `;
-  }
-
-  _click(value: string) {
+  _click() {
     let event = new CustomEvent('option-clicked', {
       detail: {
-        message: 'Something important happened',
-        value: value
+        message: 'option clicked',
+        value: this.value
       }
     });
     this.dispatchEvent(event);
+  }
+
+  render(): TemplateResult {
+    return html`
+      <div class="option" @click=${this._click}>
+        <slot></slot>
+      </div>
+    `;
   }
 }
