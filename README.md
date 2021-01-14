@@ -30,7 +30,7 @@ npm i aquaponem
 
 ### Install Aquaponem via cdn
 
-Put this into your html and replace @latest with any version you want to use, ex. @0.0.1
+Put this into your html and replace @latest with any version you want to use, ex. @0.0.2
 
 Note: if you use script tag, please skip initialization and go to Usage section
 
