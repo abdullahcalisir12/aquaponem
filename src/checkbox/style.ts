@@ -2,13 +2,14 @@ import { css } from "lit-element";
 
 
 export const style = css`
-  .container {
+  :host {
     display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -16,32 +17,34 @@ export const style = css`
   }
 
   .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+    display: none;
   }
 
   .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+    position:relative;
+    height: 32px;
+    width: 32px;
+    border: 2px solid var(--c-primary);
+    background-color: transparent;
+    border-radius: var(--br-md);
+    margin-right: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-
-  .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+  .container:hover {
+    opacity: .75;
   }
 
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
+    background: var(--c-primary);
+    border-radius: var(--br-sm);
+    width: 20px;
+    height: 20px;
   }
 
   .container input:checked ~ .checkmark:after {
