@@ -9,24 +9,15 @@ export class Radio extends LitElement {
     return [
       style,
       css`
-        .checkmark {
+        .checkmark, .checkmark:after  {
           border-radius: 50%;
-        }
-
-        .container .checkmark:after {
-          top: 9px;
-          left: 9px;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: white;
         }`
     ];
   }
   render() {
     return html`
       <label class="container">
-        <input type="radio" name=${this.name}>
+        <input type="radio" name=${this.name} checked>
         <span class="checkmark"></span>
         <slot>${this.label}</slot>
       </label>
