@@ -1,7 +1,7 @@
 {
   "name": "aquaponem",
   "description": "Aquaponem Design System Web Components",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "build/dist/index.js",
   "files": [
     "build/_snowpack",
@@ -35,10 +35,13 @@
     "url": "git+https://github.com/abdullahcalisir12/aquaponem.git"
   },
   "keywords": [
-    "Design System",
-    "Lit-Element",
-    "Lit-Html",
-    "Web Components"
+    "design system",
+    "lit-element",
+    "lit-html",
+    "components",
+    "custom components",
+    "web components",
+    "components library"
   ],
   "author": "Abdullah Calisir <abdullahcalisir12@gmail.com> (https://github.com/abdullahcalisir12)",
   "license": "MIT",
