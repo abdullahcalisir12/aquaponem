@@ -12,9 +12,10 @@ Aquaponem is a web components library using lit-element to create a shared desig
    1. [Initialize All Components](#all-component-initialization)
    2. [Initialize Single Component](#single-component-initialization)
 4. [Usage](#usage)
-5. [Built With](#built-with)
-6. [Authors](#authors)
-7. [License](#license)
+5. [Demos](#demos)
+6. [Built With](#built-with)
+7. [Authors](#authors)
+8. [License](#license)
 
 ## Getting Started
 
@@ -28,22 +29,22 @@ These instructions will get you a copy of the project up and running on your loc
 npm i aquaponem
 ```
 
-### Install Aquaponem via cdn
+### Install Aquaponem via url
 
-Put this into your html and replace @latest with any version you want to use, ex. @0.0.2
+Put this into your html and replace @latest with any version you want to use, ex. @0.0.5
 
 Note: if you use script tag, please skip initialization and go to Usage section
 
 ```
-<script src='https://unpkg.com/aquaponem@latest/build/dist/index.js'></script>
+<script type="module" src="https://unpkg.com/aquaponem@latest/build/dist/index.js"></script>
 ```
 
 or
 
 ```
-<script src='https://unpkg.com/aquaponem@latest/build/dist/app/index.js'></script>
-<script src='https://unpkg.com/aquaponem@latest/build/dist/theme/index.js'></script>
-<script src='https://unpkg.com/aquaponem@latest/build/dist/button/index.js'></script>
+<script type="module" src='https://unpkg.com/aquaponem@latest/build/dist/app/index.js'></script>
+<script type="module" src='https://unpkg.com/aquaponem@latest/build/dist/theme/index.js'></script>
+<script type="module" src='https://unpkg.com/aquaponem@latest/build/dist/button/index.js'></script>
 ```
 
 ## Initialization
@@ -69,6 +70,13 @@ import { App, Theme, Button } from 'aquaponem';
    <aq-theme>
 <aq-app>
 ```
+
+## Demos
+
+1. [Static](https://codesandbox.io/s/aquaponem-static-kq9bu)
+2. [Vue - script tag](https://codesandbox.io/s/aquaponem-vue-script-tag-pif3j)
+3. [Vue - npm](https://codesandbox.io/s/aquaponem-vue-npm-pk2p8)
+4. [Svelte - npm](https://codesandbox.io/s/aquaponem-svelte-npm-g6s6i)
 
 ## Built With
 
