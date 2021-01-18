@@ -78,7 +78,7 @@ export class Input extends LitElement {
           disabled: this.disabled
         })}
       >
-        ${this.multiline ? this.renderTextarea() : this.renderInput() } 
+        ${this.multiline ? this.renderTextarea() : this.renderInput() }
         <span>${this.label}</span>
       </label>
     `;
