@@ -8,11 +8,19 @@ export class Select extends LitElement {
   @property() label!: string;
   @property() color!: string;
   @property() value: string = '';
+  @property() name!: string;
 
+  @internalProperty() selected!: HTMLInputElement;
   @internalProperty() focused: boolean = false;
   @internalProperty() valid: boolean = false;
   @internalProperty() error: boolean = false;
   @internalProperty() disabled: boolean = false;
+
+  get _selectedOption(): HTMLInputElement {
+    const slot = this.shadowRoot?.querySelector('slot');
+    const childNodes = slot?.assignedNodes({flatten: true}) || [];
+    return Array.prototype.find.call(childNodes, (node) => node.nodeType === Node.ELEMENT_NODE && node.value === this.value);
+  }
 
   _input(e: { target: HTMLInputElement }) {
     this.value = e.target.value;
@@ -25,10 +33,15 @@ export class Select extends LitElement {
   _onOptionClick(e: { target: HTMLInputElement }) {
     this.value = e.target.value;
     this.focused = false;
+    this.selected = this._selectedOption;
   }
 
   _stop(e: any) {
     e.stopPropagation();
+  }
+
+  updated() {
+    this.selected = this._selectedOption;
   }
 
   connectedCallback() {
@@ -53,9 +66,9 @@ export class Select extends LitElement {
         })}"
         for="select"
         @click=${this._stop}>
-        <input type="hidden" .value=${this.value} />
+        <input type="hidden" name=${ifDefined(this.name)} .value=${this.value} />
         <div class="select" @click=${this._click}>
-          <div class="selected">${ifDefined(this.value)}</div>
+          <div class="selected">${this.selected && this.selected.innerHTML}</div>
         </div>
         <div class="options ${classMap({ open: this.focused })}">
             <slot @option-click=${this._onOptionClick}></slot>
@@ -82,7 +95,7 @@ export class Select extends LitElement {
         font-size: 1.25rem;
         border: 2px solid var(--c-neutral);
         border-radius: var(--br-md);
-        height: 56px;
+        min-height: 56px;
       }
 
       label.focused, label.filled {
