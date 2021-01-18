@@ -1,4 +1,4 @@
-import { css, CSSResultArray, customElement, html, LitElement, property } from "lit-element";
+import { CSSResultArray, customElement, html, LitElement, property } from "lit-element";
 import { prefix } from "@constants";
 import { style } from "./style";
 @customElement(`${prefix}-checkbox`)
@@ -13,7 +13,7 @@ export class Checkbox extends LitElement {
   render() {
     return html`
       <label class="container">
-        <input type="checkbox" name=${this.name} checked>
+        <input type="checkbox" name=${this.name}>
         <span class="checkmark"></span>
         <slot>${this.label}</slot>
       </label>
