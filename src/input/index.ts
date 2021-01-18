@@ -1,6 +1,7 @@
 import { prefix } from "@constants";
 import { html, customElement, LitElement, property, TemplateResult, css, internalProperty} from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
+import { ifDefined } from "lit-html/directives/if-defined";
 
 @customElement(`${prefix}-input`)
 export class Input extends LitElement {
@@ -8,6 +9,7 @@ export class Input extends LitElement {
   @property() label!: string;
   @property() color!: string;
   @property() value: string = '';
+  @property() name!: string;
 
   @internalProperty() focused: boolean = false;
   @internalProperty() valid: boolean = false;
@@ -102,6 +104,7 @@ export class Input extends LitElement {
         @focus=${this._focus}
         @blur=${this._blur}
         @input=${this._input}
+        name=${ifDefined(this.name)}
         .value=${this.value}
       ></textarea>
     `;
@@ -113,6 +116,7 @@ export class Input extends LitElement {
         @focus=${this._focus}
         @blur=${this._blur}
         @input=${this._input}
+        name=${ifDefined(this.name)}
         .value=${this.value}
       />
     `;
