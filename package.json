@@ -1,7 +1,7 @@
 {
   "name": "aquaponem",
   "description": "Aquaponem Design System Web Components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "build/dist/index.js",
   "files": [
     "build/__snowpack",
