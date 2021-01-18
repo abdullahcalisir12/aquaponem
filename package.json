@@ -1,7 +1,7 @@
 {
   "name": "aquaponem",
   "description": "Aquaponem Design System Web Components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "build/dist/index.js",
   "files": [
     "build/dist",
