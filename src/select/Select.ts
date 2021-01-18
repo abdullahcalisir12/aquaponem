@@ -1,4 +1,4 @@
-import { css, CSSResult, customElement, internalProperty, LitElement, html, TemplateResult, property, queryAll, query } from "lit-element";
+import { css, CSSResult, customElement, internalProperty, LitElement, html, TemplateResult, property } from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
 import { ifDefined } from "lit-html/directives/if-defined";
 import { prefix } from "@constants";
