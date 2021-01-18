@@ -4,8 +4,8 @@
   "version": "0.0.6",
   "main": "build/dist/index.js",
   "files": [
-    "build/dist",
-    "build/web_modules"
+    "build/__snowpack",
+    "build/dist"
   ],
   "scripts": {
     "start": "snowpack dev",
