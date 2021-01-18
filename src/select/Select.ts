@@ -27,8 +27,8 @@ export class Select extends LitElement {
     this.value = e.target.value;
   }
 
-  _click(e: Event) {
-    this.focused = true;
+  _toggle() {
+    this.focused = !this.focused;
   }
 
   _onOptionClick(e: { target: HTMLInputElement }) {
@@ -68,7 +68,7 @@ export class Select extends LitElement {
         for="select"
         @click=${this._stop}>
         <input type="hidden" name=${ifDefined(this.name)} .value=${this.value} />
-        <div class="select" @click=${this._click}>
+        <div class="select" @click=${this._toggle}>
           <div class="selected">${this.selected && this.selected.innerHTML}</div>
         </div>
         <div class="options ${classMap({ open: this.focused })}">
