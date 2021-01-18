@@ -2,6 +2,7 @@ import { prefix } from "@constants";
 import { html, customElement, LitElement, property, TemplateResult, css, internalProperty} from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
 import { ifDefined } from "lit-html/directives/if-defined";
+import { style } from './style';
 
 @customElement(`${prefix}-input`)
 export class Input extends LitElement {
@@ -17,85 +18,29 @@ export class Input extends LitElement {
   @internalProperty() disabled: boolean = false;
 
   static get styles() {
-    return css`
-      :host {
-        display: block;
-      }
+    return [
+      style,
+      css`
+        input, textarea {
+          all: unset;
+          display: block;
+          height: 100%;
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 56px;
+          box-sizing: content-box;
+        }
 
-      label {
-        display: flex;
-        position: relative;
-        font-size: 1.25rem;
-        border: 2px solid var(--c-neutral);
-        border-radius: var(--br-md);
-      }
+        textarea {
+          height: 100px;
+          padding: 1rem 1.5rem;
+        }
 
-      label.focused, label.filled {
-        border-color: var(--c-primary);
-      }
-
-      label.success {
-        border-color: var(--c-success);
-      }
-
-      label.error {
-        border-color: var(--c-danger);
-      }
-
-      label.disabled {
-        border-color: var(--c-disabled);
-      }
-
-      input, textarea {
-        all: unset;
-        display: block;
-        height: 100%;
-        width: 100%;
-        padding: 0 1.5rem;
-        height: 56px;
-        box-sizing: content-box;
-      }
-
-      textarea {
-        height: 100px;
-        padding: 1rem 1.5rem;
-      }
-
-      label span {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%) !important;
-        left: 1.5rem;
-        font-size: 1.25rem;
-        transition: top 0.3s ease, font-size 0.3s, color 0.3s;
-        color: var(--c-neutral);
-      }
-
-      textarea + span {
-        top: 1.5rem;
-      }
-
-      label.focused span, label.filled span {
-        padding: 0 .5rem;
-        top: 0;
-        left: 1rem;
-        font-size: 1rem;
-        color: var(--c-primary);
-        background-color: var(--bg-color);
-      }
-
-      label.success span {
-        color: var(--c-success);
-      }
-
-      label.error span {
-        color: var(--c-danger);
-      }
-
-      label.disabled span {
-        color: var(--c-disabled);
-      }
-    `;
+        textarea + span {
+          top: 1.5rem;
+        }
+      `
+    ];
   }
 
   renderTextarea() {
