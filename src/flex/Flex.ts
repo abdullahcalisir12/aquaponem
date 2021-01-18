@@ -21,7 +21,6 @@ export class Flex extends LitElement {
         flex-wrap: wrap;
         margin: 0 calc(var(--gutters-h) / -2);
         height: 100%;
-        width: 100%;
       }
     `;
   }
